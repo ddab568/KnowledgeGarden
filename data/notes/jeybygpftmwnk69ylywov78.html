@@ -1,0 +1,350 @@
+<h1 id="solutions-architect-associate">Solutions Architect Associate<a aria-hidden="true" class="anchor-heading icon-link" href="#solutions-architect-associate"></a></h1>
+<p>Notes attributed to <a href="https://learn.cantrill.io/courses/enrolled/1820301">this course</a></p>
+<h2 id="aws-accounts">AWS Accounts<a aria-hidden="true" class="anchor-heading icon-link" href="#aws-accounts"></a></h2>
+<ul>
+<li>An AWS account is a container for identities (users) and resources</li>
+<li>Every AWS account has a root user</li>
+<li>The account root user can't be restricted it has full access to everything within this account.</li>
+<li>The credit card used with the root account will be the Account Payment method, everything will be billed to that card</li>
+<li>AWS is a pay-as-you-go/consume platform</li>
+<li>Certain resources have a free-tier</li>
+<li>IAM - every AWS account comes with it's own IAM Database</li>
+<li>IAM lets you create 3 different IAM profiles - Users, groups and roles
+<ul>
+<li>Users represent humans or applications that need access to your account - this is for individual purposes</li>
+<li>Groups are a collection of related users</li>
+<li>Roles can be used for granting external access to your account</li>
+</ul>
+</li>
+<li>IAM policy - used to allow/deny access to AWS services attached to other identities</li>
+<li>IAM is an identity provider, which also authenticates and authorizes</li>
+<li>IAM Access Keys are long term credentials with up to 2 available per IAM user typically used in CLIs or applications</li>
+<li>Access Keys are made up of Access Key ID and the Secret Access Key</li>
+</ul>
+<h2 id="technical-fundamentals">Technical fundamentals<a aria-hidden="true" class="anchor-heading icon-link" href="#technical-fundamentals"></a></h2>
+<p>Pre-cursor to the concepts covered in this course summarized here:
+<a href="/KnowledgeGarden/notes/fqi20n3dabq8rhrs04h6tk3">Tech Fundamentals</a></p>
+<h2 id="aws-fundamentals">AWS Fundamentals<a aria-hidden="true" class="anchor-heading icon-link" href="#aws-fundamentals"></a></h2>
+<h3 id="public-vs-private-services">Public vs Private services<a aria-hidden="true" class="anchor-heading icon-link" href="#public-vs-private-services"></a></h3>
+<ul>
+<li>Services can be categorized into two types: public and private services</li>
+<li>AWS public and private service are separated by network access.</li>
+<li>Public service is something which can be accessed using public endpoints e.g. s3</li>
+<li>A private aws service runs within a vpc so only what is connected to that vpc can access it</li>
+<li>AWS has three zones - the public internet zone, the private network and the AWS public zone which runs in between the public and private zone.</li>
+<li>AWS public zone is where public services operate from e.g. s3</li>
+</ul>
+<h3 id="aws-global-infrastructure">AWS Global Infrastructure<a aria-hidden="true" class="anchor-heading icon-link" href="#aws-global-infrastructure"></a></h3>
+<ul>
+<li>AWS have created their infrastructure platform consisting of isolated regions connected together.</li>
+<li>A region is a creation of AWS which covers an area over the world which contains a full deployment of AWS infrastructure. New regions are added all the time.</li>
+<li>When interacting with most AWS services you're doing it at a particular region e.g. elastic compute cloud in North virginia is different to interacting to elastic compute in Sydney.</li>
+<li>AWS also provides Edge locations which are smaller than regions and they typically have only content distribution services as well as some types of edge computing. They are useful for companies like Netflix who want to store tv shows and movies as close to their customers as possible to allow low for low latency and high speed distribution</li>
+<li>Some services act from a global perspective e.g. IAM</li>
+<li>Regions have three main benefits:</li>
+</ul>
+<ol>
+<li>Each reason is separate geographically which isolates any faults</li>
+<li>Geopolitical separation - different governance depending the region</li>
+<li>Location control - tune architecture performance relative to an area</li>
+</ol>
+<ul>
+<li>Regions also have a code e.g. Sydney is ep-southeast-2, as well as a name - Asia Pacific (Sydney)</li>
+</ul>
+<p>Inside every region, AWS also provide multiple availability zones. These give isolated infrastructure within a region. If a region experiences an isolated issue but only one availability zone is affected, the others are likely to be still fully functional. A solutions architect may distribute the services across multiple availability zones. This is used to build resilience.</p>
+<h3 id="aws-default-virtual-private-cloud-vpc">AWS Default Virtual Private Cloud (VPC)<a aria-hidden="true" class="anchor-heading icon-link" href="#aws-default-virtual-private-cloud-vpc"></a></h3>
+<ul>
+<li>A VPC is a Virtual Network inside AWS</li>
+<li>A VPC is a regional service that operates within that region</li>
+<li>A VPC by default is private and isolated. Services deployed into the same vpc can communicate but it's isolated from other vpcs and the AWS zone/public internet.</li>
+<li>There are two types of VPCs per account:</li>
+</ul>
+<ol>
+<li>Default VPCs - can only have one per region. Configured by AWS.</li>
+<li>Custom VPCs - can have many per region. You use these in almost all serious AWS deployments to configure them how you like.</li>
+</ol>
+<ul>
+<li>VPCs cannot communicate with each other without you configuring them to do so.</li>
+<li>VPCs are regionally resilient</li>
+<li>The default VPC gets a default CIDR IP range which is always the same - 172.31.0.0/16</li>
+<li>A VPC can be subdivided into subnets for resilience. Each subnet inside a VPC can be put into an availability zone. The default VPC has one subnet in every availability zone in that region.</li>
+<li>the default VPC assigns a public address to the services by default.</li>
+</ul>
+<h3 id="elastic-compute-cloud-ec2">Elastic Compute Cloud (EC2)<a aria-hidden="true" class="anchor-heading icon-link" href="#elastic-compute-cloud-ec2"></a></h3>
+<ul>
+<li>EC2 is a service which allows you to provision virtual machines known as instances with an operating system.</li>
+<li>EC2 is IAAS (Infrastructure as a Service) which provides access to virtual machines (instances)</li>
+<li>An instance is just an operating system configured in a certain way</li>
+<li>EC2 is a private AWS service by default - it uses VPC. You can configure it to have public access</li>
+<li>An EC2 is AZ (availability zone) resilient. If the AZ fails then the instance fails</li>
+<li>You can choose an instance with various sizes and capabilities</li>
+<li>EC2 provides on-demand billing - per second</li>
+<li>Instances can use different types of storage e.g. local host storage (ec2 host) or Elastic Block Store (EBS) which is network storage made available</li>
+<li>EC2 instances have a state e.g. RUNNING -> STOPPED -> TERMINATED</li>
+<li>EC2 can be moved from RUNNING TO STOPPED and back again</li>
+<li>TERMINATING an instance is a one way change, you can do that from the RUNNING or STOPPED state. It's a non-reversible action</li>
+<li>At a high level, an instance is composed of CPU, memory, disk and networking. You are charged for all four of those instances.</li>
+<li>When an instance is STOPPED, it means no CPU, memory or network is being used therefore you won't be charged for any running costs of that instance. Storage however is still being used when it's in the stopped state which means you will be charged for it.</li>
+<li>In order to have no costs for an EC2 instance you need to terminate it.</li>
+<li>An Amazon Machine Image (AMI) is an image of an EC2 instance.</li>
+<li>An AMI can be used to create an EC2 instance or an AMI can be created from an EC2 instance.</li>
+<li>An AMI is similar to a server image in a physical server</li>
+<li>An AMI contains:
+<ul>
+<li>Attached permissions - who can use the image e.g only owner vs specific accounts vs public</li>
+<li>Root volume - the drive that boots the operating system</li>
+<li>Block device mapping - configuration which links the volumes that the AMI has and how they're presented to the operating system e.g boot vs data volume</li>
+</ul>
+</li>
+<li>EC2 can host different OS e.g. linux, windows, macos. You can connect to them via remote desktop (windows) or SSH (linux/macos)</li>
+</ul>
+<h3 id="simple-storage-service-s3">Simple Storage Service (S3)<a aria-hidden="true" class="anchor-heading icon-link" href="#simple-storage-service-s3"></a></h3>
+<ul>
+<li>S3 is a global storage platform - it's regionally resilient. The data is replicated across availability zones in that regions. It can tolerate a fault in an AZ</li>
+<li>S3 is a public service</li>
+<li>It's used to host a large amount of data e.g. movies, audio, photos, text, large data sets</li>
+<li>Economical and can be accessed via a variety of methods e.g. UI/CLI/API/HTTP</li>
+<li>S3 delivers two main things:</li>
+</ul>
+<ol>
+<li>Objects - the data s3 stores</li>
+<li>Buckets - containers for objects</li>
+</ol>
+<p><strong>Objects</strong> are basically files that are made up of two components:</p>
+<ol>
+<li>the object key (name) - usually the file name</li>
+<li>the object value (data) - the data or contents of the object</li>
+</ol>
+<ul>
+<li>
+<p>The bucket name needs to be <strong>globally unique</strong> - this is across all regions and aws accounts. It should be between 3-63 characters, all lower case, no underscores. Must start with a lowercase letter or a number. It can't be formatted like an IP address.</p>
+</li>
+<li>
+<p>A bucket can hold an unlimited number of objects and an unlimited amount of data - it's an infinitely scalable service.</p>
+</li>
+<li>
+<p>A bucket may show on the UI that it has folders but the underlying structure is flat and everything sits in the root. Folders are referred to as prefixes in s3 as they prefix the object names.</p>
+</li>
+<li>
+<p>There is a soft limit of 100 buckets for an s3 account and a hard limit of 1000 buckets using support request.</p>
+</li>
+<li>
+<p>You can have unlimited objects in a bucket, with each object able to range between 0 to 5TB in size.</p>
+</li>
+<li>
+<p>S3 is not a file or block. It is an object store</p>
+</li>
+<li>
+<p>You can't mount an s3 bucket as a drive e.g. K:\ or /images</p>
+</li>
+<li>
+<p>s3 is great for large scale data storage, distribution or upload</p>
+</li>
+<li>
+<p>great for offloading - moving data from a server to the s3</p>
+</li>
+<li>
+<p>Most services can use s3 as an INPUT or OUTPUT. s3 is a good default for data storage.</p>
+</li>
+</ul>
+<h3 id="cloudformation-cfn-basics">CloudFormation (CFN) basics<a aria-hidden="true" class="anchor-heading icon-link" href="#cloudformation-cfn-basics"></a></h3>
+<ul>
+<li>CloudFormation is Infrastructure as Code (IaC) which allows automation infrastructure creation, update and deletion.</li>
+<li>CFN uses templates written in either YAML or JSON</li>
+<li>A template:
+<ul>
+<li>has a list of resources to do the action on (at least one - mandatory)</li>
+<li>description - the only restriction with this is if the template has an AWSTemplateFormatVersion, the description must come directly after it (this can be a trick question in the exam)</li>
+<li>metadata - controls how the UI presents the template</li>
+<li>parameters - adds fields which need to be added with input (default values could be provided)</li>
+<li>mappings - allows you to create lookup tables</li>
+<li>conditions - decision making in the template</li>
+<li>outputs - once the template is finished it can present outputs based on the resource e.g. the instance ID of the ec2</li>
+</ul>
+</li>
+<li>CloudFormation takes a template and creates a stack. A stack contains all the logical resources the template tells it to contain. CFN will create a corresponding physical resource in your AWS account.</li>
+<li>You can update or delete the logical resources in the template and the template will do this to the physical resources on your account</li>
+<li>CFN exists to automate infrastructure</li>
+<li>CFN can be used as part of change management as it can be put in code repositories</li>
+</ul>
+<h3 id="cloudwatch-cw-basics">CloudWatch (CW) Basics<a aria-hidden="true" class="anchor-heading icon-link" href="#cloudwatch-cw-basics"></a></h3>
+<ul>
+<li>CloudWatch is a support service which is used by many other AWS services. It collects and manages operational data detailing how it performs, runs or logging data</li>
+<li>It performs 3 main jobs:</li>
+</ul>
+<ol>
+<li><strong>Metrics</strong> - collects metrics from AWS products, Apps, on-premises</li>
+<li><strong>Logs</strong> - collects logs as above</li>
+<li><strong>Events</strong> - Cloudwatch can generate events to do something</li>
+</ol>
+<ul>
+<li>Namespace is a container for monitoring data. It's a way of separating things into different areas e.g. AWS/EC2</li>
+<li>A metric is a collection of related data points in a time ordered structure e.g. cpu utilization, network I/O or disk I/O</li>
+<li>Data points are measurements of data consisting of a timestamp and value</li>
+<li>Dimensions are used to separate data points within the same metric e.g. instance ID (i-xxxxx) and instance type (t3.small)</li>
+<li>We can take action on metrics using alarms</li>
+</ul>
+<h3 id="shared-responsibility-model">Shared Responsibility Model<a aria-hidden="true" class="anchor-heading icon-link" href="#shared-responsibility-model"></a></h3>
+<ul>
+<li>Shared responsibility in AWS is the principal that some areas you have to manage vs AWS have to manage</li>
+<li>At a high level, AWS is responsible for the security of the cloud where as customers are responsible for the security in the cloud</li>
+<li>AWS responsibilities include managing security of regions, Availability Zones and Edge locations specifically the hardware/global infrastructure.</li>
+<li>AWS also manage the security around compute, storage, database and networking as well as any software that is used to provide those services</li>
+<li>Customers need to take care of client side data encryption, server side encryption and network traffic protection.</li>
+<li>Customers need to take care of OS, network and firewall configuration</li>
+<li>Customers need to take care of platform, applications, identity and access management as well as customer data.</li>
+</ul>
+<p><img src="/KnowledgeGarden/assets/images/srp-model.png" alt="Shared Responsibility Model"></p>
+<h3 id="high-availability-vs-fault-tolerance-vs-disaster-recovery">High-Availability vs Fault-Tolerance vs Disaster Recovery<a aria-hidden="true" class="anchor-heading icon-link" href="#high-availability-vs-fault-tolerance-vs-disaster-recovery"></a></h3>
+<ul>
+<li>High Availability (HA) aims to ensure an agreed level of operational performance, usually uptime. for a higher than normal period</li>
+<li>HA is about maximizing a system's online time</li>
+<li>System availability is usually expressed as a percentage of uptime e.g. 99.9% a year means 8.77 hours p/year downtime</li>
+<li>Fault tolerance (FA) is the property that enables a system to continue operating properly in the event of the failure of one or more of its components</li>
+<li>HA is just about maximizing uptime where as FA is operating through failure e.g. a aeroplane can't just be highly available it must be fault tolerant</li>
+<li>FA is much more complex and more costly to implement as you need to minimize outages but also design a system that will tolerate a failure</li>
+<li>Disaster recovery (DR) is a set of policies, tools and procedures to enable the recovery or continuation of vital technology infrastructure and systems following a natural or human-induced disaster</li>
+<li>You need to plan what should be done in the event of a failure. An example of DR planning is having off-site backup storage</li>
+<li>DR planning should happen in advance so that the process is automated</li>
+</ul>
+<p><strong>Summary</strong>:</p>
+<ul>
+<li>HA - minimise outages</li>
+<li>FA - operate through faults</li>
+<li>DR - used when these don't work</li>
+</ul>
+<h3 id="route53-r53-fundamentals">Route53 (R53) Fundamentals<a aria-hidden="true" class="anchor-heading icon-link" href="#route53-r53-fundamentals"></a></h3>
+<ul>
+<li>Route53 provides two main services:</li>
+</ul>
+<ol>
+<li>Allows you to register domains</li>
+<li>Hosts zones on managed nameservers it provides</li>
+</ol>
+<ul>
+<li>Route53 is a global service with a single Database. You don't need to pick a region</li>
+<li>It is globally resilient so it can tolerate the fault of multiple regions</li>
+<li>Route53 provides DNS zones as well as hosting for those zones</li>
+<li>Zone files are created and hosted on four managed name servers</li>
+<li>Hosted zones can be public or private (VPC)</li>
+<li>A hosted zone hosts DNS records (recordsets)</li>
+</ul>
+<h3 id="dns-record-types">DNS Record Types<a aria-hidden="true" class="anchor-heading icon-link" href="#dns-record-types"></a></h3>
+<ul>
+<li>
+<p>There are different records that can be stored in DNS:</p>
+<ul>
+<li>
+<p>Nameserver (NS) - allow delegation to occur end to end in DNS. e.g example.com → ns1.example.com, ns2.example.com</p>
+</li>
+<li>
+<p>A and AAAA Records - A record will point to a v4 IP address and the AAAA will point to the v6 IP address. For example:</p>
+<p><strong> A Record:</strong> example.com → 192.168.1.1</p>
+<p><strong> AAAA Record:</strong> example.com → 2001:db8::1</p>
+</li>
+<li>
+<p>CNAME - Canonical Name - lets you create the equivalent of DNS shortcuts by pointing to the same A record. E.g. <a href="http://www.example.com">www.example.com</a> → example.com</p>
+</li>
+<li>
+<p>MX Record - how a server can find a mail server for a specific domain. Includes a priority number</p>
+<pre><code>example.com
+  Priority: 10 → mail1.example.com
+  Priority: 20 → mail2.example.com
+</code></pre>
+</li>
+<li>
+<p>TXT - allow you to add arbitrary text to a domain that must be matched to prove domain ownership.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>TTL (Time To Live) is the time set by the DNS to determine how long a DNS record is cached by a resolver (DNS server o browser) before it must check for an updated record from an authoritative server.</p>
+</li>
+</ul>
+<h2 id="iam-accounts-and-aws-organisations">IAM, Accounts and AWS Organisations<a aria-hidden="true" class="anchor-heading icon-link" href="#iam-accounts-and-aws-organisations"></a></h2>
+<h3 id="iam-identity-policies">IAM Identity Policies<a aria-hidden="true" class="anchor-heading icon-link" href="#iam-identity-policies"></a></h3>
+<ul>
+<li>
+<p>IAM policies are a type of policy which get attached to identities in AWS</p>
+</li>
+<li>
+<p>Identities are IAM users, groups and roles</p>
+</li>
+<li>
+<p>IAM Policies:</p>
+<ul>
+<li>provides and denies access to features in AWS</li>
+<li>Policy documents are created using JSON containing one or more statements</li>
+<li>the first part of a statement is a Sid (Statement ID) which is an optional field that lets you identify a statement and what it does. Using these is best practice to inform the reader</li>
+<li>Every statement will have a resource you're interacting with and the action you're wanting to perform on that resource</li>
+<li>The action is in the format "service:operation" where the operation can possibly be a wild card or a list of multiple actions</li>
+<li>Resources is the same only it matches AWS resources. Individual resources are referred to using the ARN</li>
+<li>Effect is either allow or deny. It is possible to be allowed and denied at the same time</li>
+</ul>
+<pre class="language-json"><code class="language-json">&#x3C;!-- Policy document example -->
+<span class="token punctuation">{</span>
+  <span class="token property">"Version"</span><span class="token operator">:</span> <span class="token string">"2012-10-17"</span><span class="token punctuation">,</span>
+  <span class="token property">"Statement"</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">{</span>
+      <span class="token property">"Sid"</span><span class="token operator">:</span> <span class="token string">"FullAccess"</span><span class="token punctuation">,</span>
+      <span class="token property">"Effect"</span><span class="token operator">:</span> <span class="token string">"Allow"</span><span class="token punctuation">,</span>
+      <span class="token property">"Action"</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">"s3:*"</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+      <span class="token property">"Resource"</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">"*"</span><span class="token punctuation">]</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<ul>
+<li>when there is an overlap in permissions, then both of the statements are processed where the priority begins at explicit denies. Denies overrule everything else. The second priority are explicit allows. Allows take effect unless there are explicit denies. The default if no rules are in place, the default is DENY.</li>
+<li>With the exception of the account root user, aws identity start of with NO ACCESS to aws resources.</li>
+<li>Remember: explicit DENY > explicit ALLOW > DENY</li>
+</ul>
+</li>
+<li>
+<p>There are two types of policies: Inline policies and managed policies</p>
+</li>
+<li>
+<p>Inline policies are when you apply individual JSON policy documents to each individual account. This is good for exceptional or special access rights for an individual as opposed to a group or a number of people</p>
+</li>
+<li>
+<p>Managed policies are another JSON policy that you'd attach to identities in a reusable way. These should be used for the normal default rights in a business as they are low overhead</p>
+</li>
+<li>
+<p>There are two types of managed policies: AWS managed policies and customer managed policies which you can create and manage for exact requirements</p>
+</li>
+</ul>
+<h3 id="iam-users-and-arns">IAM Users and ARNs<a aria-hidden="true" class="anchor-heading icon-link" href="#iam-users-and-arns"></a></h3>
+<ul>
+<li>IAM users are an identity used for anything required long term AWS access e.g. humans, applications or service accounts</li>
+<li>A principal (a person/application) makes a request tto IAM to authenticate to a resource</li>
+<li>Authentication for IAM users is done using either username and password or access keys. Access keys are usually used by applications or by humans using CLI tools.</li>
+<li>Once a principal goes through the access tools, they become an authenticated identity</li>
+<li>Once a principal is identified AWS knows which policies apply to an identity. This is the process of authorization.</li>
+<li>Authentication is how a prinicpal can prove to IAM it's who they say they are where as AUthorization checks the policies attached to the identity to give them permission for a resource</li>
+<li>ARN (Amazon Resource Name) uniquely identify resources within any AWS accounts.</li>
+<li>ARN is used to allow you to refer to a single or group of resources using wild cards</li>
+<li>ARNs are used in IAM policies</li>
+<li>The format is:
+<code>arn:partition:service:region:account-id:resource-id</code>
+<code>arn:partition:service:region:account-id:resource-type/resource-id</code>
+<code>arn:partition:service:region:account-id:resource-type:resource-id</code></li>
+<li>You can only have 5000 IAM users per account</li>
+<li>An IAM User can be a member of 10 groups</li>
+<li>If you have more than 5000 identifiable users then IAM users is not the right identity to use for that solution. You can fix this with IAM roles or Identity Federation.</li>
+</ul>
+<h3 id="iam-groups">IAM Groups<a aria-hidden="true" class="anchor-heading icon-link" href="#iam-groups"></a></h3>
+<ul>
+<li>IAM groups are containers for IAM users</li>
+<li>You can't log into IAM groups nor do they have credentials of their own</li>
+<li>THey are used solely to manage and organise IAM users</li>
+<li>an IAM user can be part of multiple IAM groups</li>
+<li>Groups can have policies attached to them, both inline and managed</li>
+<li>You can also have individual inline/managed policies at the user level</li>
+<li>You should collect all the policies that apply to a user from their groups and individual policies and apply the same deny-allow-deny rule to work out what their permissions are</li>
+<li>There is no limit for the amount of users in an IAM group but the IAM user limit of 5000 exists for the whole account</li>
+<li>There is no such 'all users' group in IAM built in. You can create this and manage it manually</li>
+<li>You cannot have any nesting in groups</li>
+<li>There is a limit of 300 groups per account but it can be increased with a support ticket</li>
+<li>Policies can be attached to resources as well for example a bucket can have a policy attached to it where it allows and denies identities access to that bucket.</li>
+<li>A resource can be refer to a user or role to give permission to itself but it cannot give it to a group. This is because a group is not a true identity and they can't be referenced as a principal in a policy</li>
+</ul>

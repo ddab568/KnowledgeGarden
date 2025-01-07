@@ -1,0 +1,57 @@
+<h1 id="search-engine-optimization-seo">Search Engine Optimization (SEO)<a aria-hidden="true" class="anchor-heading icon-link" href="#search-engine-optimization-seo"></a></h1>
+<p>General guide for achieving good SEO for website:</p>
+<p>Three Pillars of optimization according to NextJS:</p>
+<ol>
+<li><strong>Technical</strong> - optimization/performance of the website</li>
+<li><strong>Creation</strong> - ensuring optimal content creation to target specific keywords</li>
+<li><strong>Popularity</strong> - Using backlinks (third party sites linked back to your own) so that search engines know you are a trusted source. Having an online presence. </li>
+</ol>
+<p><strong>Web crawlers</strong> are a type of bot that mimic end users and navigate links found on websites in order to perform indexing for search engines. They identify themselves through custom <a href="https://developers.google.com/search/docs/advanced/crawling/overview-google-crawlers">user-agents</a>. </p>
+<h4 id="notes-on-improving-seo">Notes on improving SEO<a aria-hidden="true" class="anchor-heading icon-link" href="#notes-on-improving-seo"></a></h4>
+<ul>
+<li>Build a sitemap</li>
+<li>Use SSR or SSGs - see <a href="/KnowledgeGarden/notes/KnACyiSV918ASnIeSH2TQ">Rendering Design Patterns / Strategies</a>. SPAs usually don't use url paths and loading time is not ideal for a crawler.</li>
+<li>Use metadata such as <code>&#x3C;title></code> and <code>&#x3C;meta name="description" content="A good description here"></code> on every page
+<ul>
+<li>robot tags are directives search engines will respect e.g. <code>&#x3C;meta name="robots" content="noindex,nofollow"></code> . These meta tags can be produced on demand as opposed to robots.txt</li>
+<li>canonical tags to prevent the detection of duplicate content</li>
+</ul>
+</li>
+<li>Ensure good performance e.g. response time</li>
+<li>Use alt for images</li>
+<li>Use meaningful status codes
+<ul>
+<li>200 in general</li>
+<li>301 for redirects to indicate permanently moved. Next JS Uses 308 redirects instead to preserve request methods used. 302 and 301s change the request method of the redirect to a GET</li>
+</ul>
+</li>
+<li>Use semantic HTML - the correct and most relevant tags</li>
+<li>Use a good URL structure e.g. semantic urls /learn/nextjs-app-course vs /courses/1</li>
+</ul>
+<p>In November 2020, Google added three new metrics to their page experience signals called Core Web Vitals:</p>
+<ul>
+<li>Largest Contentful Paint (LCP) - The amount of time it takes to render the largest content element within the viewable area of the screen e.g. featured image</li>
+<li>First Input Delay (FID) - the time between the first users input and when the page responds (responsiveness)</li>
+<li>Cumulative Layout Shift (CLS) - visual stability of a page - checking for "janky-ness" where the screen shifts</li>
+</ul>
+<h3 id="largest-contentful-paint-lcp">Largest Contentful Paint (LCP)<a aria-hidden="true" class="anchor-heading icon-link" href="#largest-contentful-paint-lcp"></a></h3>
+<p>Common causes of poor LCP:</p>
+<ul>
+<li>
+<p><strong>Slow server response times </strong>- The first thing to look at is Time to First Byte (TFFB) and see if that can be improved.</p>
+</li>
+<li>
+<p><strong>Render blocking JS and CSS</strong> - style sheets and javascript imports will block the HTML parser. Defer any non-critical JavaScript &#x26; CSS. CSS and JS files can be minified.</p>
+</li>
+<li>
+<p>Slow resource load times - optimize and compress images</p>
+</li>
+<li>
+<p>Client side rendering - If you're building a site that is mostly rendered on the client, you should be wary of the effect it can have on LCP if a large JS bundle is used.</p>
+</li>
+</ul>
+<h3 id="references">References<a aria-hidden="true" class="anchor-heading icon-link" href="#references"></a></h3>
+<ol>
+<li><a href="https://nextjs.org/learn/seo/crawling-and-indexing/status-codes">https://nextjs.org/learn/seo/crawling-and-indexing/status-codes</a></li>
+<li><a href="https://nextjs.org/learn/seo/rendering-and-ranking/rendering-strategies">https://nextjs.org/learn/seo/rendering-and-ranking/rendering-strategies</a></li>
+</ol>

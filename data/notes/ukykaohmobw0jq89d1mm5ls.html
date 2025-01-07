@@ -1,0 +1,11 @@
+<h1 id="react-v180">React v18.0<a aria-hidden="true" class="anchor-heading icon-link" href="#react-v180"></a></h1>
+<h2 id="concurrent-rendering">Concurrent Rendering<a aria-hidden="true" class="anchor-heading icon-link" href="#concurrent-rendering"></a></h2>
+<p>A behind-the-scenes mechanism introduced in React 18 in order to render more seamlessly.</p>
+<p>Before React 18, rendering was a synchronous transaction meaning that once rendering started it could not be interrupted. React 18 introduces features such as suspense and stream server rendering meaning rendering can be interrupted, paused, resumed or abandoned.</p>
+<p>The problem with synchronous rendering is that while a component is re-rendering, the rest of the app becomes unresponsive until it's complete since main thread is blocked. If we picture this being a list that is updated each time the user changes input and the list takes a while to re-render, the other components must wait until it completes making it a janky user experience.</p>
+<h2 id="automatic-batching">Automatic Batching<a aria-hidden="true" class="anchor-heading icon-link" href="#automatic-batching"></a></h2>
+<h2 id="transitions">Transitions<a aria-hidden="true" class="anchor-heading icon-link" href="#transitions"></a></h2>
+<h2 id="new-suspense-features">New Suspense Features<a aria-hidden="true" class="anchor-heading icon-link" href="#new-suspense-features"></a></h2>
+<h2 id="new-client-and-server-rendering-api">New Client and Server Rendering API<a aria-hidden="true" class="anchor-heading icon-link" href="#new-client-and-server-rendering-api"></a></h2>
+<h2 id="new-strict-mode-behaviors">New Strict Mode Behaviors<a aria-hidden="true" class="anchor-heading icon-link" href="#new-strict-mode-behaviors"></a></h2>
+<h2 id="new-hooks">New Hooks<a aria-hidden="true" class="anchor-heading icon-link" href="#new-hooks"></a></h2>

@@ -1,0 +1,36 @@
+<h1 id="architecture">Architecture<a aria-hidden="true" class="anchor-heading icon-link" href="#architecture"></a></h1>
+<p>Topics that don't necessarily fit into just FE or BE e.g. repo management, CI/CD, devops.</p>
+<h2 id="types-of-architectures">Types of Architectures<a aria-hidden="true" class="anchor-heading icon-link" href="#types-of-architectures"></a></h2>
+<h3 id="monolithic-architecture">Monolithic Architecture<a aria-hidden="true" class="anchor-heading icon-link" href="#monolithic-architecture"></a></h3>
+<p>A single server application
+responsible for all the features of the system e.g. a hotel application could have a single application taking care of payments, bookings, campaign offers and so on. This is a common way for applications to start out and even continue if they are simple or non-complex.</p>
+<h3 id="microservices-architecture">Microservices Architecture<a aria-hidden="true" class="anchor-heading icon-link" href="#microservices-architecture"></a></h3>
+<p>Splitting out responsibility into multiple application servers e.g. one for payments, one for streaming, one for recommendations.</p>
+<p>This allows us to scale individual services and prevent code from becoming too complex by making use of single responsibility principles and loose coupling.</p>
+<p>Microservices architecture is more complex to set up and manage and is therefore more useful for larger projects.</p>
+<h2 id="patterns-and-design-principles">Patterns and Design Principles<a aria-hidden="true" class="anchor-heading icon-link" href="#patterns-and-design-principles"></a></h2>
+<h3 id="command-query-responsibility-segregation-cqrs">Command Query Responsibility Segregation (CQRS)<a aria-hidden="true" class="anchor-heading icon-link" href="#command-query-responsibility-segregation-cqrs"></a></h3>
+<p>A pattern that separates the responsibility of reading (querying) data and modifying (commanding) the data. On the command side, CQRS emphasizes the use of commands to perform action that modify application state. The traditional alternative to CQRS is CRUD (create, read, update delete) where the same services are responsible for the handling of all operations.</p>
+<p>On the query side, CQRS emphasizes the use of queries to retrieve data from the system. These are typically handled by query handlers within the system.</p>
+<p>The main advantage of separating command and query is giving developers the ability to optimize each side independently. Read can be optimized with strategies such as caching or specialized data stores. CQRS is useful in complex domains or applications where read and write have different scalability and performance requests. Considering it adds complexity would mean that it's not suitable for all requirements and trade-offs should be taken into account.</p>
+<p><a href="/KnowledgeGarden/notes/x9svkv1c2vvyef4l5xjdmps">Read more</a></p>
+<h3 id="acid--cap-theorem">ACID &#x26; CAP Theorem<a aria-hidden="true" class="anchor-heading icon-link" href="#acid--cap-theorem"></a></h3>
+<p>ACID (Atomic, Consistency, Isolation, Durability) and CAP (Consistency, Availability, Partition Tolerance) are concepts in distributed systems that are used to explain the trade offs between consistency and availability.</p>
+<p>According to the CAP theorem, any distributed system can only guarantee two of three properties at a time. You can't guarantee all three properties at once:</p>
+<img src="https://miro.medium.com/v2/resize:fit:1400/format:webp/1*Br1FrvKnK3hU6Xl_LbDkwg.png">
+<p>ACID is a set of properties of database transactions intended to guarantee validity even in the event of errors, power failures, etc.</p>
+<hr>
+<strong>Children</strong>
+<ol>
+<li><a href="/KnowledgeGarden/notes/gb52lee4nm5k27xqxprhu2w">AWS</a></li>
+<li><a href="/KnowledgeGarden/notes/x9svkv1c2vvyef4l5xjdmps">CQRS</a></li>
+<li><a href="/KnowledgeGarden/notes/lncbqck7txvsvlv4qjkdmzd">Code Repositories</a></li>
+<li><a href="/KnowledgeGarden/notes/7gq4n7i7t84iqthitoblipc">Hexagonal Architecture</a></li>
+<li><a href="/KnowledgeGarden/notes/966coupiif7uop6ntjy7ztu">System Design</a></li>
+<li><a href="/KnowledgeGarden/notes/fqi20n3dabq8rhrs04h6tk3">Tech Fundamentals</a></li>
+</ol>
+<hr>
+<strong>Backlinks</strong>
+<ul>
+<li><a href="/KnowledgeGarden/notes/7gq4n7i7t84iqthitoblipc">Hexagonal Architecture</a></li>
+</ul>

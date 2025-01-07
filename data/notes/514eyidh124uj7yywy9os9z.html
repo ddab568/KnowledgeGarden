@@ -1,0 +1,106 @@
+<h1 id="machine-setup">Machine Setup<a aria-hidden="true" class="anchor-heading icon-link" href="#machine-setup"></a></h1>
+<p>My machine setup preferences.</p>
+<h2 id="programs">Programs<a aria-hidden="true" class="anchor-heading icon-link" href="#programs"></a></h2>
+<ol>
+<li>
+<p><a href="https://plentycom.jp/en/steermouse/">Steermouse</a> - to set up mouse hot keys</p>
+</li>
+<li>
+<p><a href="https://rectangleapp.com/">Rectangle</a> - Mac window snapping</p>
+</li>
+<li>
+<p><a href="https://sw.kovidgoyal.net/kitty/">kitty</a> - better terminal</p>
+</li>
+<li>
+<p><a href="https://github.com/sharkdp/bat">bat</a> - instead of <code>cat</code> for syntax highlighting and pretty print</p>
+</li>
+<li>
+<p><a href="https://github.com/tmux/tmux/wiki">tmux</a> - terminal multiplexer</p>
+</li>
+<li>
+<p><a href="https://code.visualstudio.com/">vscode</a> - for most languages and frameworks unless I need a really smart IDE then I would use intellij</p>
+</li>
+<li>
+<p><a href="https://ohmyz.sh/">oh-my-zsh</a> - zsh config manager</p>
+</li>
+<li>
+<p><a href="https://stedolan.github.io/jq/">jq</a> (optional, I only use this sometimes) - pretty printing json usually to pipe curl output</p>
+</li>
+</ol>
+<h2 id="configuration-files">Configuration files<a aria-hidden="true" class="anchor-heading icon-link" href="#configuration-files"></a></h2>
+<h3 id="vim">vim<a aria-hidden="true" class="anchor-heading icon-link" href="#vim"></a></h3>
+<pre class="language-bash"><code class="language-bash">filetype plugin indent on  <span class="token string">" Load plugins according to detected filetype.
+syntax on                  "</span> Enable syntax highlighting.
+
+colorscheme desert
+<span class="token builtin class-name">set</span> autoindent             <span class="token string">" Indent according to previous line.
+set expandtab              "</span> Use spaces instead of tabs.
+<span class="token builtin class-name">set</span> softtabstop <span class="token operator">=</span><span class="token number">4</span>         <span class="token string">" Tab key indents by 4 spaces.
+set shiftwidth  =4         "</span> <span class="token operator">>></span> indents by <span class="token number">4</span> spaces.
+<span class="token builtin class-name">set</span> shiftround             <span class="token string">" >> indents to next multiple of 'shiftwidth'.
+set number
+set listchars=eol:¬,tab:>·,trail:~,extends:>,precedes:&#x3C;
+set list
+set showmode               "</span> Show current mode <span class="token keyword">in</span> command-line.
+
+<span class="token builtin class-name">set</span> incsearch              <span class="token string">" Highlight while searching with / or ?.
+set hlsearch               "</span> Keep matches highlighted.
+
+<span class="token builtin class-name">set</span> cursorline             " Find the current line quickly.
+</code></pre>
+<h2 id="tmux">tmux<a aria-hidden="true" class="anchor-heading icon-link" href="#tmux"></a></h2>
+<pre class="language-bash"><code class="language-bash">unbind C-b
+set-option -g prefix C-a
+bind-key C-a send-prefix
+
+<span class="token comment"># split panes using | and -</span>
+<span class="token builtin class-name">bind</span> <span class="token operator">|</span> split-window -h
+<span class="token builtin class-name">bind</span> - split-window -v
+unbind <span class="token string">'"'</span>
+unbind %
+
+<span class="token comment"># reload config file (change file location to your the tmux.conf you want to use)</span>
+<span class="token builtin class-name">bind</span> r source-file ~/.tmux.conf
+
+<span class="token comment"># Enable mouse mode (tmux 2.1 and above)</span>
+<span class="token builtin class-name">set</span> -g mouse on
+
+<span class="token builtin class-name">set</span> -g history-limit <span class="token number">5000</span>
+
+<span class="token builtin class-name">set</span> -g default-terminal <span class="token string">"screen-256color"</span>
+
+</code></pre>
+<h2 id="zhrc">zhrc<a aria-hidden="true" class="anchor-heading icon-link" href="#zhrc"></a></h2>
+<pre class="language-bash"><code class="language-bash"><span class="token comment"># keep most of the file with some changes/ additions</span>
+
+<span class="token assign-left variable">ZSH_THEME</span><span class="token operator">=</span><span class="token string">"alanpeabody"</span>
+
+<span class="token assign-left variable">plugins</span><span class="token operator">=</span><span class="token punctuation">(</span>
+    <span class="token function">git</span>
+     zsh-autosuggestions
+<span class="token punctuation">)</span>
+
+<span class="token comment">## command line prompt -</span>
+<span class="token comment">## shows username, path and git branch details</span>
+<span class="token function-name function">parse_git_branch</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">git</span> branch <span class="token operator"><span class="token file-descriptor important">2</span>></span> /dev/null <span class="token operator">|</span> <span class="token function">sed</span> -n -e <span class="token string">'s/^\* \(.*\)/[\1]/p'</span>
+<span class="token punctuation">}</span>
+<span class="token assign-left variable">COLOR_DEF</span><span class="token operator">=</span><span class="token string">'%f'</span>
+<span class="token assign-left variable">COLOR_USR</span><span class="token operator">=</span><span class="token string">'%F{243}'</span>
+<span class="token assign-left variable">COLOR_DIR</span><span class="token operator">=</span><span class="token string">'%F{197}'</span>
+<span class="token assign-left variable">COLOR_GIT</span><span class="token operator">=</span><span class="token string">'%F{39}'</span>
+<span class="token assign-left variable">NEWLINE</span><span class="token operator">=</span><span class="token string">$'<span class="token entity" title="\n">\n</span>'</span>
+setopt PROMPT_SUBST
+<span class="token builtin class-name">export</span> <span class="token assign-left variable">PROMPT</span><span class="token operator">=</span><span class="token string">'${COLOR_USR}%n ${COLOR_DIR}%d ${COLOR_GIT}$(parse_git_branch)${COLOR_DEF}${NEWLINE}%% '</span>
+
+<span class="token comment">## default editor</span>
+<span class="token builtin class-name">export</span> <span class="token assign-left variable">EDITOR</span><span class="token operator">=</span>vim
+
+<span class="token comment"># kitty - Fix issues with terminal navigation in tmux</span>
+bindkey <span class="token string">"<span class="token entity" title="\e">\e</span>[1;3D"</span> backward-word <span class="token comment"># ⌥←</span>
+bindkey <span class="token string">"<span class="token entity" title="\e">\e</span>[1;3C"</span> forward-word <span class="token comment"># ⌥→</span>
+
+
+<span class="token comment"># for JQ extention if using -  "null" is hard to see so change the colour</span>
+<span class="token builtin class-name">export</span> <span class="token assign-left variable">JQ_COLORS</span><span class="token operator">=</span><span class="token string">'0;31:0;39:0;39:0;39:0;32:1;39:1;39'</span>
+</code></pre>

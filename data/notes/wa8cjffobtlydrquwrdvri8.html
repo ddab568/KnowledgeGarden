@@ -1,0 +1,32 @@
+<h1 id="leetcode">Leetcode<a aria-hidden="true" class="anchor-heading icon-link" href="#leetcode"></a></h1>
+<h3 id="leetcode-solutions--explanation">Leetcode solutions + explanation<a aria-hidden="true" class="anchor-heading icon-link" href="#leetcode-solutions--explanation"></a></h3>
+<h3 id="53maximum-subarray">53.Maximum Subarray<a aria-hidden="true" class="anchor-heading icon-link" href="#53maximum-subarray"></a></h3>
+<p><a href="https://leetcode.com/problems/maximum-subarray/">https://leetcode.com/problems/maximum-subarray/</a></p>
+<h4 id="approach">Approach<a aria-hidden="true" class="anchor-heading icon-link" href="#approach"></a></h4>
+<p>In order to get the maximum sub array, we keep track of the maximum sum so far and a running sum of the current subarray.</p>
+<p>We iterate over the array from the 2nd index, with both current and max sum set to the first value in the array. We need to determine whether we consider the current number as part of this sub array or if we should start a new window. How do we know if continuing this subarray or not is the right choice? We check whether the sum so far PLUS the current number is better than just taking the number itself. This is to cater for the scenario where you have negative numbers in a subarray. Consider the scenario where subarray is either good to continue vs starting new:</p>
+<p>a) [4, -1, 8] </p>
+<p>vs</p>
+<p>b) [4, -6, 8]</p>
+<p>In a) when we get to the number 8, currentSum will equal 3 (4+(-1)). We then check whether currentSum + 8 is better than 8 itself. In this scenario, the sum is better (3+8 > 8) therefore we take the whole array and max sum becomes 11</p>
+<p>if we take b), when we get to 8, the current sum is -2 (4+(-6)). If we compare the currentsum + 8 to just 8, it's more beneficial to start a new window (at 8) since (-2 + 8 &#x3C; 8). Therefore max sum in the second scenario becomes 8.</p>
+<h4 id="solution">Solution<a aria-hidden="true" class="anchor-heading icon-link" href="#solution"></a></h4>
+<p><strong>Time</strong>: <code>O(n)</code></p>
+<p><strong>Space</strong>: <code>O(n)</code></p>
+<pre class="language-js"><code class="language-js"><span class="token doc-comment comment">/**
+ * <span class="token keyword">@param</span> <span class="token class-name"><span class="token punctuation">{</span>number<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">}</span></span> <span class="token parameter">nums</span>
+ * <span class="token keyword">@return</span> <span class="token class-name"><span class="token punctuation">{</span>number<span class="token punctuation">}</span></span>
+ */</span>
+<span class="token keyword">var</span> <span class="token function-variable function">maxSubArray</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">nums</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">let</span> maxSum <span class="token operator">=</span> nums<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token keyword">let</span> currentSum <span class="token operator">=</span> nums<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+    <span class="token keyword control-flow">for</span><span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">1</span> <span class="token punctuation">;</span> i <span class="token operator">&#x3C;</span> nums<span class="token punctuation">.</span><span class="token property-access">length</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        currentSum <span class="token operator">=</span> <span class="token known-class-name class-name">Math</span><span class="token punctuation">.</span><span class="token method function property-access">max</span><span class="token punctuation">(</span>currentSum <span class="token operator">+</span> nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">,</span> nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        maxSum <span class="token operator">=</span> <span class="token known-class-name class-name">Math</span><span class="token punctuation">.</span><span class="token method function property-access">max</span><span class="token punctuation">(</span>currentSum<span class="token punctuation">,</span> maxSum<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword control-flow">return</span> maxSum<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+</code></pre>

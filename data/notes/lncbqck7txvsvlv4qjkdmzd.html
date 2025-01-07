@@ -1,0 +1,45 @@
+<h1 id="code-repositories">Code Repositories<a aria-hidden="true" class="anchor-heading icon-link" href="#code-repositories"></a></h1>
+<h5 id="handling-multiple-related-projects">Handling multiple related projects:<a aria-hidden="true" class="anchor-heading icon-link" href="#handling-multiple-related-projects"></a></h5>
+<h2 id="monorepos">Monorepos<a aria-hidden="true" class="anchor-heading icon-link" href="#monorepos"></a></h2>
+<p>Mono (single) repo (repository) is the concept of having a shared codebase of multiple projects. </p>
+<p>The opposite of this would be to spread projects across different repositories e.g. repo-A contains BFF code, repo-B contains client code, repo-C is a micro service etc. </p>
+<h3 id="advantages">Advantages<a aria-hidden="true" class="anchor-heading icon-link" href="#advantages"></a></h3>
+<p>When multiple repositories exist for projects that are interlinked, you issues such as:</p>
+<ul>
+<li>Having to create multiple pull-requests in various projects which are merged in the 'correct' order to minimize breaking changes</li>
+<li>Difficulty of using updated dependencies locally before they are updated on remote e.g. npm libraries.</li>
+</ul>
+<p>Having a monorepo can mean:</p>
+<ul>
+<li>managing multiple projects is much easier</li>
+<li>dependencies reflect locally immediately</li>
+<li>improves collaboration between teams by ensuring ownership of ecosystem cohesiveness - poly repos pipelines are often independent and breaking changes can be missed</li>
+</ul>
+<h3 id="in-practice">In practice<a aria-hidden="true" class="anchor-heading icon-link" href="#in-practice"></a></h3>
+<p>A code repository can be structured in various ways to reflect a mono repo. An example could be:</p>
+<pre class="language-bash"><code class="language-bash">- apps/
+--- app-one
+--- app-two
+- packages/
+--- ui
+--- utilities
+--- eslint-config
+--- ts-config
+
+</code></pre>
+<hr>
+<h4 id="references">References<a aria-hidden="true" class="anchor-heading icon-link" href="#references"></a></h4>
+<ol>
+<li><a href="https://www.robinwieruch.de/javascript-monorepos/?ck_subscriber_id=1441143038">https://www.robinwieruch.de/javascript-monorepos/?ck_subscriber_id=1441143038</a></li>
+</ol>
+<hr>
+<p>some potentially interesting things:
+<a href="https://yarnpkg.com/features/workspaces">https://yarnpkg.com/features/workspaces</a> - yarn v2 workspaces overview - shows how easy it is to tie node packages together. other relevant docs are zero installs/offline cache, both super important when it comes to monorepo on CI (re: solving 'how to manage dependencies for N projects')
+<a href="https://github.com/lerna/lerna">https://github.com/lerna/lerna</a> - tool for managing monorepos. supports npm or yarn workspaces. yarn v2 covers a lot of its features. ive played with it a LOT and NEVER actually used it. always seemed needless/too specific to package based monorepos (read: not enterprise based monorepos)
+<a href="https://monorepo.guide/">https://monorepo.guide/</a> - thinkmill (aus consultancy) high level intro to monorepos &#x26; links to some of their own tools / examples
+<a href="https://www.atlassian.com/git/tutorials/monorepos">https://www.atlassian.com/git/tutorials/monorepos</a> - atlassian overview of monorepo architecture &#x26; common pitfalls/strategies for solving git scaling
+<a href="https://www.youtube.com/watch?v=W71BTkUbdqE">https://www.youtube.com/watch?v=W71BTkUbdqE</a> - old video but an overview of google's monorepo. blew my mind. their investment in tooling is insane.
+some of my own stuff:
+<a href="https://github.com/meatwallace/yarks#clipboard-release-strategy">https://github.com/meatwallace/yarks#clipboard-release-strategy</a> - monorepo package publishing strategy outline from a tool i wrote that uses git, semantic-release and yarn v2/berry workspaces
+<a href="https://github.com/meatwallace/foundations/tree/master/packages">https://github.com/meatwallace/foundations/tree/master/packages</a> - basic yarn v2 package-based monorepo using the above package for deployment)
+<a href="https://github.com/meatwallace/tbd">https://github.com/meatwallace/tbd</a> - basic yarn v2 app/enterprise based monorepo. its missing anything advanced atm re: scaling but foundationally it's something i could use.</p>

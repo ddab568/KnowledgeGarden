@@ -1,0 +1,139 @@
+<h1 id="api-architecture">API Architecture<a aria-hidden="true" class="anchor-heading icon-link" href="#api-architecture"></a></h1>
+<p>A note describing some of the different API architectures/protocols, namely RPC, REST and GraphQL.</p>
+<h2 id="rpc---remote-procedure-call">RPC - Remote Procedure Call<a aria-hidden="true" class="anchor-heading icon-link" href="#rpc---remote-procedure-call"></a></h2>
+<p>Earliest API architecture. Remote Procedure Call (RPC), as the name implies, calls a remote "<a href="/KnowledgeGarden/programming-paradigms#procedural-programming,1:#*">procedure</a>" or a function e.g. from a client application to the API on a server.</p>
+<p>How the procedure/function is invoked on the server depends on the framework and choice of technology adopted. RPC is just a concept, and in a simple scenario, the method called could be determined by simply parsing query parameters from the url coming from the client and performing a string comparison, matching the method from the client to the server.</p>
+<p>A contrived example where a client invokes the API to perform mathematical operations on two numbers 'a' and 'b' and return the result:</p>
+<pre class="language-javascript"><code class="language-Javascript"><span class="token doc-comment comment">/** Server API **/</span>
+<span class="token keyword">const</span> express <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'express'</span><span class="token punctuation">)</span>
+<span class="token keyword">const</span> app <span class="token operator">=</span> <span class="token function">express</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">const</span> port <span class="token operator">=</span> <span class="token number">3000</span>
+
+app<span class="token punctuation">.</span><span class="token method function property-access">get</span><span class="token punctuation">(</span><span class="token string">'/'</span><span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token parameter">req<span class="token punctuation">,</span> res</span><span class="token punctuation">)</span> <span class="token arrow operator">=></span> <span class="token punctuation">{</span>
+  <span class="token comment">// extract the method being called from the query params</span>
+  <span class="token comment">// URL is in the format http(s)://&#x3C;host>/method=&#x3C;methodName>&#x26;b=&#x3C;b>&#x26;c=&#x3C;c></span>
+  <span class="token keyword">const</span> <span class="token punctuation">{</span> method <span class="token punctuation">}</span> <span class="token operator">=</span> req<span class="token punctuation">.</span><span class="token property-access">query</span><span class="token punctuation">;</span>
+  <span class="token keyword">const</span> a <span class="token operator">=</span> <span class="token function">parseInt</span><span class="token punctuation">(</span>req<span class="token punctuation">.</span><span class="token property-access">query</span><span class="token punctuation">.</span><span class="token property-access">a</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">const</span> b <span class="token operator">=</span> <span class="token function">parseInt</span><span class="token punctuation">(</span>req<span class="token punctuation">.</span><span class="token property-access">query</span><span class="token punctuation">.</span><span class="token property-access">b</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">let</span> methodResponse <span class="token operator">=</span> <span class="token string">""</span><span class="token punctuation">;</span>
+
+  <span class="token comment">// call the method requested - here we do a simple string comparison</span>
+  <span class="token comment">// so that it appears the FE and BE "share" procedures</span>
+  <span class="token keyword control-flow">switch</span><span class="token punctuation">(</span>method<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+     <span class="token keyword">case</span> <span class="token string">"add"</span><span class="token operator">:</span>
+     	methodResponse <span class="token operator">=</span> <span class="token function">add</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span>b<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword control-flow">break</span><span class="token punctuation">;</span>
+     <span class="token keyword">case</span> <span class="token string">"multiply"</span><span class="token operator">:</span>
+     	methodResponse <span class="token operator">=</span> <span class="token function">multiply</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span>b<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword control-flow">break</span><span class="token punctuation">;</span>
+     <span class="token keyword">case</span> <span class="token string">"minus"</span><span class="token operator">:</span>
+     	methodResponse <span class="token operator">=</span> <span class="token function">minus</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span>b<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token keyword control-flow">break</span><span class="token punctuation">;</span>
+     <span class="token keyword module">default</span><span class="token operator">:</span>
+        methodResponse <span class="token operator">=</span> <span class="token string">"method doesn't exist"</span><span class="token punctuation">;</span>
+
+  <span class="token punctuation">}</span>
+
+  res<span class="token punctuation">.</span><span class="token method function property-access">send</span><span class="token punctuation">(</span><span class="token punctuation">{</span> <span class="token literal-property property">result</span><span class="token operator">:</span> methodResponse <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+<span class="token keyword">function</span> <span class="token function">add</span><span class="token punctuation">(</span><span class="token parameter">a<span class="token punctuation">,</span> b</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword control-flow">return</span> a <span class="token operator">+</span> b<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">function</span> <span class="token function">multiply</span><span class="token punctuation">(</span><span class="token parameter">a<span class="token punctuation">,</span> b</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword control-flow">return</span> a <span class="token operator">*</span> b<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">function</span> <span class="token function">minus</span><span class="token punctuation">(</span><span class="token parameter">a<span class="token punctuation">,</span> b</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword control-flow">return</span> a <span class="token operator">-</span> b<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+app<span class="token punctuation">.</span><span class="token method function property-access">listen</span><span class="token punctuation">(</span>port<span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token arrow operator">=></span> <span class="token punctuation">{</span>
+  <span class="token console class-name">console</span><span class="token punctuation">.</span><span class="token method function property-access">log</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">Example app listening on port </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>port<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+</code></pre>
+<p>A client can communicate to the above API application as follows:</p>
+<pre class="language-bash"><code class="language-bash">GET http://localhost:3000/?method<span class="token operator">=</span>multiply<span class="token operator">&#x26;</span><span class="token assign-left variable">a</span><span class="token operator">=</span><span class="token number">4</span><span class="token operator">&#x26;</span><span class="token assign-left variable">b</span><span class="token operator">=</span><span class="token number">2</span>
+<span class="token punctuation">{</span>output: <span class="token number">8</span><span class="token punctuation">}</span> <span class="token comment">#response recieved</span>
+
+</code></pre>
+<h3 id="disadvantages">Disadvantages<a aria-hidden="true" class="anchor-heading icon-link" href="#disadvantages"></a></h3>
+<p><strong>Tight coupling</strong> - RPCs client and server are tightly coupled since function calls need to match.</p>
+<p><strong>Leaking internal implementation</strong> - It may be considered a flaw that the inner workings of the API are somewhat revealed to the client as the backend method names may be "telling".</p>
+<p><strong>Extensibility of methods is difficult</strong> - it's often the case that in RPC API's, a procedure may not perform the exact functionality and hence another method that does something slightly different is added. In this case, there is an overload of similar functions which can be messy:</p>
+<pre class="language-javascript"><code class="language-javascript"><span class="token keyword">function</span> <span class="token function">multiply</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment">// does something</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">function</span> <span class="token function">multiplyV2</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment">// does something similar to multiply() but different</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">function</span> <span class="token function">multiplyV3</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment">// etc</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h3 id="advantages">Advantages<a aria-hidden="true" class="anchor-heading icon-link" href="#advantages"></a></h3>
+<p><strong>Lightweight</strong> - RPC APIs are expected not to return a lot of meta data and the most popular frameworks such as gRPC are built in such a way that allows them to be more performant than their REST counterpart.</p>
+<p><strong>Action-oriented</strong> - RPCs are good for action oriented applications where we are calling 'commands' rather than focusing on resources.</p>
+<h3 id="grpc">gRPC<a aria-hidden="true" class="anchor-heading icon-link" href="#grpc"></a></h3>
+<p>One of the most notable examples of RPC frameworks in modern day is <a href="https://grpc.io/">gRPC</a>. gRPC is an open-source Google framework used for high performance microservice architecture styles. It's supported by multiple languages/frameworks such as Go, Node, Rust Python and more. It's used by many well known tech companies such as Square, Netlfix and <a href="https://blog.cloudflare.com/road-to-grpc/">Cloudflare</a>.</p>
+<p>gRPC is considered highly performant due to:</p>
+<ul>
+<li>Using HTTP/2 for transport</li>
+<li>Allowing both clients and servers to stream data as opposed to polling (<em>Note: I believe this is available due to HTTP/2</em>)</li>
+<li>Encouraging <strong>Protobuf</strong> as the messaging format</li>
+</ul>
+<p>Protobuf (protocol buffers) are a message format that allow for serialization of structured data in a language neutral way. They are an alternative messaging format to others such as JSON or XML and are considered more compact to achieve low latency.</p>
+<p>Example of a Protobuf message:</p>
+<pre class="language-protobuf"><code class="language-Protobuf"><span class="token comment">// Person.proto</span>
+<span class="token keyword">message</span> <span class="token class-name">Person</span> <span class="token punctuation">{</span>
+  <span class="token keyword">required</span> <span class="token builtin">string</span> name <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+  <span class="token keyword">required</span> <span class="token builtin">int32</span> age <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span>
+  <span class="token keyword">optional</span> <span class="token builtin">string</span> email <span class="token operator">=</span> <span class="token number">3</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>Protobufs are encoded in such a way that makes them lightweight and performant.</p>
+<p><img src="/KnowledgeGarden/assets/images/2022-03-03-10-51-00.png"></p>
+Source: https://developers.google.com/protocol-buffers/docs/overview#work
+<br>
+<br>
+<p>gRPC can be implemented using a variety of languages or frameworks, however it seems performance varies - multiple language performance tests are <a href="https://grpc.io/docs/guides/benchmarking/">performed often</a> on the code base. Note that the <a href="https://grafana-dot-grpc-testing.appspot.com/?kiosk=tv">performance dashboard</a> is missing Node however, it has been <a href="https://www.nexthink.com/blog/comparing-grpc-performance/">benchmarked by 3rd parties</a> and <em>appears</em> to be less performant than alternatives such as Go.</p>
+<p>gRPC currently cannot natively communicate with the web via HTML/2. Browsers do not support protobuf payloads and hence, grpc-web was introduced in order to act as a proxy to serialize web payload and give developers the ability to use protobufs across the full stack:</p>
+<p><img src="/KnowledgeGarden/assets/images/2022-03-03-10-13-17.png" alt="https://grpc.io/blog/state-of-grpc-web/"></p>
+Source: https://grpc.io/blog/state-of-grpc-web/
+<br>
+<br>
+Prior to this, developers would likely use REST APIs with HTTP to communicate with the gRPC backend.
+<h2 id="rest">REST<a aria-hidden="true" class="anchor-heading icon-link" href="#rest"></a></h2>
+<p><strong>Re</strong>presentational <strong>s</strong>tate <strong>t</strong>ransfer (REST) API is an architectural style created by Roy Fielding, described famously in his <a href="https://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm">dissertation</a>.</p>
+<p>REST is commonly not adhered to when implemented as many APIs do not tick the architectural constraints that make an API "RESTful". There are <strong>6 constraints</strong> which make a web service truly RESTful:</p>
+<ol>
+<li><strong>Uniform Interface</strong></li>
+</ol>
+<p>What distinguishes REST is uniform interface whereby the client and server are decoupled in such a way that allows them tfcv o evolve independently. Having this interface provides the client with enough information to retrieve the relevant data without having to understand the underlying implementation. This concept is achieved through these four principles:</p>
+<ul>
+<li>
+<p><strong>Identification of resources</strong> - where RPCs are command or action oriented, REST APIs are modeled around resources. For example, users in a rest API are handled via the URI <code>/user</code></p>
+</li>
+<li>
+<p><strong>Manipulation of resources through representations</strong> - When a client holds a representation of a resource, including any metadata attached, it has enough information to modify or delete the resource on the server. This makes REST APIs <strong>discoverable</strong> in that from the root of the API, the client has enough information to perform any available action on the available resources.</p>
+</li>
+<li>
+<p><strong>self-descriptive messages</strong> - Each message includes enough information to describe how to process the message. For example, by using standard <a href="https://en.wikipedia.org/wiki/Media_type#cite_note-10">MIME Types</a> e.g. <code>application/json</code>, . Responses also explicitly indicate their cache-ability. e.g. <code>Cache-Control: max-age=31536000</code></p>
+</li>
+<li>
+<p><strong>hypermedia as the engine of application state (HATEOAS)</strong> - allows the client to dynamically navigate to the appropriate resources by traversing the hypermedia links. For example, a call to <code>GET http://localhost:8080/users</code> could return:</p>
+</li>
+</ul>
+<pre class="language-json"><code class="language-JSON">
+
+</code></pre>
+<h4 id="references">References<a aria-hidden="true" class="anchor-heading icon-link" href="#references"></a></h4>
+<ol>
+<li><a href="https://blog.jscrambler.com/rpc-style-vs-rest-web-apis">https://blog.jscrambler.com/rpc-style-vs-rest-web-apis</a></li>
+<li><a href="https://grpc.io/">https://grpc.io/</a></li>
+<li><a href="https://www.restapitutorial.com/lessons/whatisrest.html#">https://www.restapitutorial.com/lessons/whatisrest.html#</a></li>
+</ol>

@@ -1,0 +1,12 @@
+<h1 id="web-components">Web Components<a aria-hidden="true" class="anchor-heading icon-link" href="#web-components"></a></h1>
+<p>Web components allow you to create custom reusable and encapuslated HTML tags to be used in web pages and apps. They are capable of isolating CSS and JavaScript similar to <code>&#x3C;iframe></code> - known as a <strong>shadown DOM</strong>. These are framework agnostic and are supported by most modern browsers.</p>
+<p>Example:</p>
+<pre class="language-javascript"><code class="language-JavaScript"><span class="token comment">// CREATE</span>
+<span class="token keyword">class</span> <span class="token class-name">MyButton</span> <span class="token keyword">extends</span> <span class="token class-name">HTMLElement</span> <span class="token punctuation">{</span><span class="token spread operator">...</span><span class="token punctuation">}</span>
+<span class="token dom variable">window</span><span class="token punctuation">.</span><span class="token property-access">customElements</span><span class="token punctuation">.</span><span class="token method function property-access">define</span><span class="token punctuation">(</span><span class="token string">'my-button'</span><span class="token punctuation">,</span> <span class="token maybe-class-name">MyButton</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// USE</span>
+<span class="token operator">&#x3C;</span>my<span class="token operator">-</span>button<span class="token operator">></span><span class="token operator">&#x3C;</span><span class="token operator">/</span>my<span class="token operator">-</span>button<span class="token operator">></span>
+</code></pre>
+<h3 id="web-components-vs-react">Web Components vs React<a aria-hidden="true" class="anchor-heading icon-link" href="#web-components-vs-react"></a></h3>
+<p>According to <a href="https://reactjs.org/docs/web-components.html#:~:text=React%20and%20Web%20Components%20are,The%20two%20goals%20are%20complementary.">React documentation</a>, Web Components and React solve different problems. React is a declarative JS library to address state management and web app "reactivity". Web components exist to address reusability and encapsulation of HTML elements. React components can only be used in React, where as web components can be used anywhere e.g. across different libraries - Vue, React, Angular etc.</p>

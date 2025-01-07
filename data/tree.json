@@ -1,0 +1,399 @@
+{
+  "roots": [
+    {
+      "key": "bwlvrHRccHBUBhHu7Mh1G",
+      "title": "Agile",
+      "icon": null,
+      "hasTitleNumberOutlined": false,
+      "vaultName": "vault",
+      "children": [
+        {
+          "key": "ZjZvFbo2iYiX6bbffE2Xk",
+          "title": "Manifesto",
+          "icon": null,
+          "hasTitleNumberOutlined": false,
+          "vaultName": "vault",
+          "children": []
+        },
+        {
+          "key": "6679dhe403qyfwbdgoxnfow",
+          "title": "Shape Up",
+          "icon": null,
+          "hasTitleNumberOutlined": false,
+          "vaultName": "vault",
+          "children": []
+        }
+      ]
+    },
+    {
+      "key": "7w0mtdy9yip2z8dm44sazxg",
+      "title": "Architecture",
+      "icon": null,
+      "hasTitleNumberOutlined": false,
+      "vaultName": "vault",
+      "children": [
+        {
+          "key": "x9svkv1c2vvyef4l5xjdmps",
+          "title": "CQRS",
+          "icon": null,
+          "hasTitleNumberOutlined": false,
+          "vaultName": "vault",
+          "children": []
+        },
+        {
+          "key": "gb52lee4nm5k27xqxprhu2w",
+          "title": "AWS",
+          "icon": null,
+          "hasTitleNumberOutlined": false,
+          "vaultName": "vault",
+          "children": [
+            {
+              "key": "jeybygpftmwnk69ylywov78",
+              "title": "Solutions Architect Associate",
+              "icon": null,
+              "hasTitleNumberOutlined": false,
+              "vaultName": "vault",
+              "children": []
+            }
+          ]
+        },
+        {
+          "key": "lncbqck7txvsvlv4qjkdmzd",
+          "title": "Code Repositories",
+          "icon": null,
+          "hasTitleNumberOutlined": false,
+          "vaultName": "vault",
+          "children": []
+        },
+        {
+          "key": "7gq4n7i7t84iqthitoblipc",
+          "title": "Hexagonal Architecture",
+          "icon": null,
+          "hasTitleNumberOutlined": false,
+          "vaultName": "vault",
+          "children": []
+        },
+        {
+          "key": "966coupiif7uop6ntjy7ztu",
+          "title": "System Design",
+          "icon": null,
+          "hasTitleNumberOutlined": false,
+          "vaultName": "vault",
+          "children": []
+        },
+        {
+          "key": "fqi20n3dabq8rhrs04h6tk3",
+          "title": "Tech Fundamentals",
+          "icon": null,
+          "hasTitleNumberOutlined": false,
+          "vaultName": "vault",
+          "children": []
+        }
+      ]
+    },
+    {
+      "key": "8h567033xcainsquqy92vos",
+      "title": "Data structures & Algorithms",
+      "icon": null,
+      "hasTitleNumberOutlined": false,
+      "vaultName": "vault",
+      "children": [
+        {
+          "key": "wa8cjffobtlydrquwrdvri8",
+          "title": "Leetcode",
+          "icon": null,
+          "hasTitleNumberOutlined": false,
+          "vaultName": "vault",
+          "children": []
+        }
+      ]
+    },
+    {
+      "key": "514eyidh124uj7yywy9os9z",
+      "title": "Machine Setup",
+      "icon": null,
+      "hasTitleNumberOutlined": false,
+      "vaultName": "vault",
+      "children": []
+    },
+    {
+      "key": "zbqz5oql3yy88t9yf8q9mtz",
+      "title": "Nextjs",
+      "icon": null,
+      "hasTitleNumberOutlined": false,
+      "vaultName": "vault",
+      "children": []
+    },
+    {
+      "key": "XZTCg1c8mZeR9jEyM2HOy",
+      "title": "Programming Paradigms",
+      "icon": null,
+      "hasTitleNumberOutlined": false,
+      "vaultName": "vault",
+      "children": []
+    },
+    {
+      "key": "6FtP5bCaxDDd47jEuSH5y",
+      "title": "Projects",
+      "icon": null,
+      "hasTitleNumberOutlined": false,
+      "vaultName": "vault",
+      "children": [
+        {
+          "key": "VGLSQgjkL1invoOn1WIVU",
+          "title": "Operation Rewrite",
+          "icon": null,
+          "hasTitleNumberOutlined": false,
+          "vaultName": "vault",
+          "children": []
+        }
+      ]
+    },
+    {
+      "key": "5c0e9ifp2lh9imgp1zahq33",
+      "title": "React",
+      "icon": null,
+      "hasTitleNumberOutlined": false,
+      "vaultName": "vault",
+      "children": [
+        {
+          "key": "ukykaohmobw0jq89d1mm5ls",
+          "title": "React v18.0",
+          "icon": null,
+          "hasTitleNumberOutlined": false,
+          "vaultName": "vault",
+          "children": []
+        }
+      ]
+    },
+    {
+      "key": "aig5i0xuh2jq0ibzfq8sz22",
+      "title": "Reactive Programming",
+      "icon": null,
+      "hasTitleNumberOutlined": false,
+      "vaultName": "vault",
+      "children": [
+        {
+          "key": "7izbnov3vo8esfmctmtyjyi",
+          "title": "Reactive Programming In Java (Course Notes)",
+          "icon": null,
+          "hasTitleNumberOutlined": false,
+          "vaultName": "vault",
+          "children": []
+        }
+      ]
+    },
+    {
+      "key": "8HZ1TTh4HUtNFePL29cg7",
+      "title": "Web",
+      "icon": null,
+      "hasTitleNumberOutlined": false,
+      "vaultName": "vault",
+      "children": [
+        {
+          "key": "7ra6xjfnrjel3qewtmik5uk",
+          "title": "Auth",
+          "icon": null,
+          "hasTitleNumberOutlined": false,
+          "vaultName": "vault",
+          "children": []
+        },
+        {
+          "key": "1y1y9h9mi8y9k3i44znhfg3",
+          "title": "Backend",
+          "icon": null,
+          "hasTitleNumberOutlined": false,
+          "vaultName": "vault",
+          "children": [
+            {
+              "key": "yskq69lbyw4kpr8y5sdx9lu",
+              "title": "API Architecture",
+              "icon": null,
+              "hasTitleNumberOutlined": false,
+              "vaultName": "vault",
+              "children": []
+            },
+            {
+              "key": "pjj5em4sf413tfn6ua9tqdw",
+              "title": "Database",
+              "icon": null,
+              "hasTitleNumberOutlined": false,
+              "vaultName": "vault",
+              "children": []
+            }
+          ]
+        },
+        {
+          "key": "w9sialel0j2a8iwov83o0qb",
+          "title": "Frameworks",
+          "icon": null,
+          "hasTitleNumberOutlined": false,
+          "vaultName": "vault",
+          "children": []
+        },
+        {
+          "key": "RhPwsgMN0xuoggGXxjHXh",
+          "title": "Frontend",
+          "icon": null,
+          "hasTitleNumberOutlined": false,
+          "vaultName": "vault",
+          "children": [
+            {
+              "key": "qj2rqad3fu03nbzrzybffsr",
+              "title": "Design Systems",
+              "icon": null,
+              "hasTitleNumberOutlined": false,
+              "vaultName": "vault",
+              "children": []
+            },
+            {
+              "key": "hgdm976sbzlf57pyokf3u8v",
+              "title": "History of Front-End",
+              "icon": null,
+              "hasTitleNumberOutlined": false,
+              "vaultName": "vault",
+              "children": []
+            },
+            {
+              "key": "KnACyiSV918ASnIeSH2TQ",
+              "title": "Rendering Design Patterns / Strategies",
+              "icon": null,
+              "hasTitleNumberOutlined": false,
+              "vaultName": "vault",
+              "children": []
+            },
+            {
+              "key": "7XijrYmKXAiV06wGj50MP",
+              "title": "Web Components",
+              "icon": null,
+              "hasTitleNumberOutlined": false,
+              "vaultName": "vault",
+              "children": []
+            }
+          ]
+        },
+        {
+          "key": "2v7ecf5kg4tc1htmyvv8nlm",
+          "title": "JavaScript",
+          "icon": null,
+          "hasTitleNumberOutlined": false,
+          "vaultName": "vault",
+          "children": [
+            {
+              "key": "lb5div6o1igoew4odjd1ufz",
+              "title": "Commonjs",
+              "icon": null,
+              "hasTitleNumberOutlined": false,
+              "vaultName": "vault",
+              "children": []
+            }
+          ]
+        },
+        {
+          "key": "fve7gkwf0qof6kdqow7oxwu",
+          "title": "pixiJS",
+          "icon": null,
+          "hasTitleNumberOutlined": false,
+          "vaultName": "vault",
+          "children": []
+        },
+        {
+          "key": "zrzx4bdqs5y3mrdwqk95lqw",
+          "title": "Project Checklist",
+          "icon": null,
+          "hasTitleNumberOutlined": false,
+          "vaultName": "vault",
+          "children": []
+        },
+        {
+          "key": "3djj66lkeevulscgwm5lcjs",
+          "title": "Search Engine Optimization (SEO)",
+          "icon": null,
+          "hasTitleNumberOutlined": false,
+          "vaultName": "vault",
+          "children": []
+        }
+      ]
+    }
+  ],
+  "child2parent": {
+    "bwlvrHRccHBUBhHu7Mh1G": null,
+    "ZjZvFbo2iYiX6bbffE2Xk": "bwlvrHRccHBUBhHu7Mh1G",
+    "6679dhe403qyfwbdgoxnfow": "bwlvrHRccHBUBhHu7Mh1G",
+    "7w0mtdy9yip2z8dm44sazxg": null,
+    "x9svkv1c2vvyef4l5xjdmps": "7w0mtdy9yip2z8dm44sazxg",
+    "gb52lee4nm5k27xqxprhu2w": "7w0mtdy9yip2z8dm44sazxg",
+    "jeybygpftmwnk69ylywov78": "gb52lee4nm5k27xqxprhu2w",
+    "lncbqck7txvsvlv4qjkdmzd": "7w0mtdy9yip2z8dm44sazxg",
+    "7gq4n7i7t84iqthitoblipc": "7w0mtdy9yip2z8dm44sazxg",
+    "966coupiif7uop6ntjy7ztu": "7w0mtdy9yip2z8dm44sazxg",
+    "fqi20n3dabq8rhrs04h6tk3": "7w0mtdy9yip2z8dm44sazxg",
+    "8h567033xcainsquqy92vos": null,
+    "wa8cjffobtlydrquwrdvri8": "8h567033xcainsquqy92vos",
+    "514eyidh124uj7yywy9os9z": null,
+    "zbqz5oql3yy88t9yf8q9mtz": null,
+    "XZTCg1c8mZeR9jEyM2HOy": null,
+    "6FtP5bCaxDDd47jEuSH5y": null,
+    "VGLSQgjkL1invoOn1WIVU": "6FtP5bCaxDDd47jEuSH5y",
+    "5c0e9ifp2lh9imgp1zahq33": null,
+    "ukykaohmobw0jq89d1mm5ls": "5c0e9ifp2lh9imgp1zahq33",
+    "aig5i0xuh2jq0ibzfq8sz22": null,
+    "7izbnov3vo8esfmctmtyjyi": "aig5i0xuh2jq0ibzfq8sz22",
+    "8HZ1TTh4HUtNFePL29cg7": null,
+    "7ra6xjfnrjel3qewtmik5uk": "8HZ1TTh4HUtNFePL29cg7",
+    "1y1y9h9mi8y9k3i44znhfg3": "8HZ1TTh4HUtNFePL29cg7",
+    "yskq69lbyw4kpr8y5sdx9lu": "1y1y9h9mi8y9k3i44znhfg3",
+    "pjj5em4sf413tfn6ua9tqdw": "1y1y9h9mi8y9k3i44znhfg3",
+    "w9sialel0j2a8iwov83o0qb": "8HZ1TTh4HUtNFePL29cg7",
+    "RhPwsgMN0xuoggGXxjHXh": "8HZ1TTh4HUtNFePL29cg7",
+    "qj2rqad3fu03nbzrzybffsr": "RhPwsgMN0xuoggGXxjHXh",
+    "hgdm976sbzlf57pyokf3u8v": "RhPwsgMN0xuoggGXxjHXh",
+    "KnACyiSV918ASnIeSH2TQ": "RhPwsgMN0xuoggGXxjHXh",
+    "7XijrYmKXAiV06wGj50MP": "RhPwsgMN0xuoggGXxjHXh",
+    "2v7ecf5kg4tc1htmyvv8nlm": "8HZ1TTh4HUtNFePL29cg7",
+    "lb5div6o1igoew4odjd1ufz": "2v7ecf5kg4tc1htmyvv8nlm",
+    "fve7gkwf0qof6kdqow7oxwu": "8HZ1TTh4HUtNFePL29cg7",
+    "zrzx4bdqs5y3mrdwqk95lqw": "8HZ1TTh4HUtNFePL29cg7",
+    "3djj66lkeevulscgwm5lcjs": "8HZ1TTh4HUtNFePL29cg7"
+  },
+  "notesLabelById": {
+    "bwlvrHRccHBUBhHu7Mh1G": "Agile",
+    "ZjZvFbo2iYiX6bbffE2Xk": "Manifesto",
+    "6679dhe403qyfwbdgoxnfow": "Shape Up",
+    "7w0mtdy9yip2z8dm44sazxg": "Architecture",
+    "x9svkv1c2vvyef4l5xjdmps": "CQRS",
+    "gb52lee4nm5k27xqxprhu2w": "AWS",
+    "jeybygpftmwnk69ylywov78": "Solutions Architect Associate",
+    "lncbqck7txvsvlv4qjkdmzd": "Code Repositories",
+    "7gq4n7i7t84iqthitoblipc": "Hexagonal Architecture",
+    "966coupiif7uop6ntjy7ztu": "System Design",
+    "fqi20n3dabq8rhrs04h6tk3": "Tech Fundamentals",
+    "8h567033xcainsquqy92vos": "Data structures & Algorithms",
+    "wa8cjffobtlydrquwrdvri8": "Leetcode",
+    "514eyidh124uj7yywy9os9z": "Machine Setup",
+    "zbqz5oql3yy88t9yf8q9mtz": "Nextjs",
+    "XZTCg1c8mZeR9jEyM2HOy": "Programming Paradigms",
+    "6FtP5bCaxDDd47jEuSH5y": "Projects",
+    "VGLSQgjkL1invoOn1WIVU": "Operation Rewrite",
+    "5c0e9ifp2lh9imgp1zahq33": "React",
+    "ukykaohmobw0jq89d1mm5ls": "React v18.0",
+    "aig5i0xuh2jq0ibzfq8sz22": "Reactive Programming",
+    "7izbnov3vo8esfmctmtyjyi": "Reactive Programming In Java (Course Notes)",
+    "8HZ1TTh4HUtNFePL29cg7": "Web",
+    "7ra6xjfnrjel3qewtmik5uk": "Auth",
+    "1y1y9h9mi8y9k3i44znhfg3": "Backend",
+    "yskq69lbyw4kpr8y5sdx9lu": "API Architecture",
+    "pjj5em4sf413tfn6ua9tqdw": "Database",
+    "w9sialel0j2a8iwov83o0qb": "Frameworks",
+    "RhPwsgMN0xuoggGXxjHXh": "Frontend",
+    "qj2rqad3fu03nbzrzybffsr": "Design Systems",
+    "hgdm976sbzlf57pyokf3u8v": "History of Front-End",
+    "KnACyiSV918ASnIeSH2TQ": "Rendering Design Patterns / Strategies",
+    "7XijrYmKXAiV06wGj50MP": "Web Components",
+    "2v7ecf5kg4tc1htmyvv8nlm": "JavaScript",
+    "lb5div6o1igoew4odjd1ufz": "Commonjs",
+    "fve7gkwf0qof6kdqow7oxwu": "pixiJS",
+    "zrzx4bdqs5y3mrdwqk95lqw": "Project Checklist",
+    "3djj66lkeevulscgwm5lcjs": "Search Engine Optimization (SEO)"
+  }
+}

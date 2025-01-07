@@ -1,0 +1,2389 @@
+{
+  "notes": {
+    "403": {
+      "vault": {
+        "fsPath": "vault"
+      },
+      "fname": "403",
+      "id": "403",
+      "title": "This page has not yet sprouted",
+      "schemaStub": false,
+      "type": "note",
+      "updated": 1736221369404,
+      "created": 1736221369404,
+      "desc": "",
+      "links": [],
+      "anchors": {},
+      "children": [],
+      "parent": null,
+      "data": {}
+    },
+    "wn8PE1RhG0znK1alrGFYv": {
+      "id": "wn8PE1RhG0znK1alrGFYv",
+      "title": "Knowledge Garden",
+      "desc": "",
+      "updated": 1725627729985,
+      "created": 1631901573363,
+      "custom": {
+        "nav_order": 0,
+        "permalink": "/"
+      },
+      "fname": "root",
+      "type": "note",
+      "vault": {
+        "fsPath": "vault"
+      },
+      "contentHash": "8d5496c75d3dbc62da1263726aa08b42",
+      "links": [],
+      "anchors": {
+        "my-second-brain": {
+          "type": "header",
+          "text": "My Second Brain",
+          "value": "my-second-brain",
+          "line": 8,
+          "column": 0,
+          "depth": 4
+        }
+      },
+      "children": [
+        "bwlvrHRccHBUBhHu7Mh1G",
+        "7w0mtdy9yip2z8dm44sazxg",
+        "8h567033xcainsquqy92vos",
+        "514eyidh124uj7yywy9os9z",
+        "zbqz5oql3yy88t9yf8q9mtz",
+        "XZTCg1c8mZeR9jEyM2HOy",
+        "6FtP5bCaxDDd47jEuSH5y",
+        "5c0e9ifp2lh9imgp1zahq33",
+        "aig5i0xuh2jq0ibzfq8sz22",
+        "8HZ1TTh4HUtNFePL29cg7"
+      ],
+      "parent": null,
+      "data": {}
+    },
+    "8HZ1TTh4HUtNFePL29cg7": {
+      "id": "8HZ1TTh4HUtNFePL29cg7",
+      "title": "Web",
+      "desc": "",
+      "updated": 1644128234217,
+      "created": 1644128234217,
+      "custom": {},
+      "fname": "web",
+      "type": "note",
+      "vault": {
+        "fsPath": "vault"
+      },
+      "contentHash": "bcc5133a863bb7229f7049252c3dd00e",
+      "links": [],
+      "anchors": {},
+      "children": [
+        "7ra6xjfnrjel3qewtmik5uk",
+        "1y1y9h9mi8y9k3i44znhfg3",
+        "w9sialel0j2a8iwov83o0qb",
+        "RhPwsgMN0xuoggGXxjHXh",
+        "2v7ecf5kg4tc1htmyvv8nlm",
+        "fve7gkwf0qof6kdqow7oxwu",
+        "zrzx4bdqs5y3mrdwqk95lqw",
+        "3djj66lkeevulscgwm5lcjs"
+      ],
+      "parent": "wn8PE1RhG0znK1alrGFYv",
+      "data": {}
+    },
+    "3djj66lkeevulscgwm5lcjs": {
+      "id": "3djj66lkeevulscgwm5lcjs",
+      "title": "Search Engine Optimization (SEO)",
+      "desc": "",
+      "updated": 1650410586320,
+      "created": 1648110596024,
+      "custom": {},
+      "fname": "web.seo",
+      "type": "note",
+      "vault": {
+        "fsPath": "vault"
+      },
+      "contentHash": "b4275bb5134ee6bdefaa11185a5a66c0",
+      "links": [
+        {
+          "type": "wiki",
+          "from": {
+            "fname": "web.seo",
+            "id": "3djj66lkeevulscgwm5lcjs",
+            "vaultName": "vault"
+          },
+          "value": "web.frontend.rendering-strategies",
+          "position": {
+            "start": {
+              "line": 15,
+              "column": 25,
+              "offset": 762
+            },
+            "end": {
+              "line": 15,
+              "column": 62,
+              "offset": 799
+            },
+            "indent": []
+          },
+          "xvault": false,
+          "sameFile": false,
+          "to": {
+            "fname": "web.frontend.rendering-strategies"
+          }
+        }
+      ],
+      "anchors": {
+        "notes-on-improving-seo": {
+          "type": "header",
+          "text": "Notes on improving SEO",
+          "value": "notes-on-improving-seo",
+          "line": 19,
+          "column": 0,
+          "depth": 4
+        },
+        "largest-contentful-paint-lcp": {
+          "type": "header",
+          "text": "Largest Contentful Paint (LCP)",
+          "value": "largest-contentful-paint-lcp",
+          "line": 39,
+          "column": 0,
+          "depth": 3
+        },
+        "references": {
+          "type": "header",
+          "text": "References",
+          "value": "references",
+          "line": 51,
+          "column": 0,
+          "depth": 3
+        }
+      },
+      "children": [],
+      "parent": "8HZ1TTh4HUtNFePL29cg7",
+      "data": {}
+    },
+    "zrzx4bdqs5y3mrdwqk95lqw": {
+      "id": "zrzx4bdqs5y3mrdwqk95lqw",
+      "title": "Project Checklist",
+      "desc": "",
+      "updated": 1647816519175,
+      "created": 1647816465266,
+      "custom": {},
+      "fname": "web.project-checklist",
+      "type": "note",
+      "vault": {
+        "fsPath": "vault"
+      },
+      "contentHash": "0aedd494a63afcc4de4a7d257b7365de",
+      "links": [],
+      "anchors": {},
+      "children": [],
+      "parent": "8HZ1TTh4HUtNFePL29cg7",
+      "data": {}
+    },
+    "fve7gkwf0qof6kdqow7oxwu": {
+      "id": "fve7gkwf0qof6kdqow7oxwu",
+      "title": "pixiJS",
+      "desc": "",
+      "updated": 1733359072593,
+      "created": 1733354454264,
+      "custom": {},
+      "fname": "web.pixiJS",
+      "type": "note",
+      "vault": {
+        "fsPath": "vault"
+      },
+      "contentHash": "5bfb6ffcb77aa9c812f08755c22e83bc",
+      "links": [],
+      "anchors": {},
+      "children": [],
+      "parent": "8HZ1TTh4HUtNFePL29cg7",
+      "data": {}
+    },
+    "2v7ecf5kg4tc1htmyvv8nlm": {
+      "id": "2v7ecf5kg4tc1htmyvv8nlm",
+      "title": "JavaScript",
+      "desc": "",
+      "updated": 1688780814873,
+      "created": 1688780814873,
+      "custom": {},
+      "fname": "web.javascript",
+      "type": "note",
+      "vault": {
+        "fsPath": "vault"
+      },
+      "contentHash": "b3745678c9a6d2797dfcbec3129f354f",
+      "links": [],
+      "anchors": {},
+      "children": [
+        "lb5div6o1igoew4odjd1ufz"
+      ],
+      "parent": "8HZ1TTh4HUtNFePL29cg7",
+      "data": {}
+    },
+    "lb5div6o1igoew4odjd1ufz": {
+      "id": "lb5div6o1igoew4odjd1ufz",
+      "title": "Commonjs",
+      "desc": "",
+      "updated": 1688780857882,
+      "created": 1688780850330,
+      "custom": {},
+      "fname": "web.javascript.commonjs",
+      "type": "note",
+      "vault": {
+        "fsPath": "vault"
+      },
+      "contentHash": "73ae2f88afef5b0e95e1a4416198a830",
+      "links": [],
+      "anchors": {},
+      "children": [],
+      "parent": "2v7ecf5kg4tc1htmyvv8nlm",
+      "data": {}
+    },
+    "RhPwsgMN0xuoggGXxjHXh": {
+      "id": "RhPwsgMN0xuoggGXxjHXh",
+      "title": "Frontend",
+      "desc": "",
+      "updated": 1644128249901,
+      "created": 1644128249901,
+      "custom": {},
+      "fname": "web.frontend",
+      "type": "note",
+      "vault": {
+        "fsPath": "vault"
+      },
+      "contentHash": "e54f8baa5ffe51a4f15783df112c57e7",
+      "links": [],
+      "anchors": {},
+      "children": [
+        "qj2rqad3fu03nbzrzybffsr",
+        "hgdm976sbzlf57pyokf3u8v",
+        "KnACyiSV918ASnIeSH2TQ",
+        "7XijrYmKXAiV06wGj50MP"
+      ],
+      "parent": "8HZ1TTh4HUtNFePL29cg7",
+      "data": {}
+    },
+    "7XijrYmKXAiV06wGj50MP": {
+      "id": "7XijrYmKXAiV06wGj50MP",
+      "title": "Web Components",
+      "desc": "",
+      "updated": 1644129246630,
+      "created": 1644128329194,
+      "custom": {},
+      "fname": "web.frontend.webcomponents",
+      "type": "note",
+      "vault": {
+        "fsPath": "vault"
+      },
+      "contentHash": "87aa0d256fe853b0822339aa084b4179",
+      "links": [],
+      "anchors": {
+        "web-components-vs-react": {
+          "type": "header",
+          "text": "Web Components vs React",
+          "value": "web-components-vs-react",
+          "line": 21,
+          "column": 0,
+          "depth": 3
+        }
+      },
+      "children": [],
+      "parent": "RhPwsgMN0xuoggGXxjHXh",
+      "data": {}
+    },
+    "KnACyiSV918ASnIeSH2TQ": {
+      "id": "KnACyiSV918ASnIeSH2TQ",
+      "title": "Rendering Design Patterns / Strategies",
+      "desc": "",
+      "updated": 1659501692463,
+      "created": 1644128273388,
+      "custom": {},
+      "fname": "web.frontend.rendering-strategies",
+      "type": "note",
+      "vault": {
+        "fsPath": "vault"
+      },
+      "contentHash": "f9041a374efa3d17fd548c575cf8b9b6",
+      "links": [
+        {
+          "from": {
+            "fname": "projects.operation-rewrite",
+            "id": "VGLSQgjkL1invoOn1WIVU",
+            "vaultName": "vault"
+          },
+          "type": "backlink",
+          "position": {
+            "start": {
+              "line": 28,
+              "column": 5,
+              "offset": 660
+            },
+            "end": {
+              "line": 28,
+              "column": 42,
+              "offset": 697
+            },
+            "indent": []
+          },
+          "value": "web.frontend.rendering-strategies"
+        },
+        {
+          "from": {
+            "fname": "web.seo",
+            "id": "3djj66lkeevulscgwm5lcjs",
+            "vaultName": "vault"
+          },
+          "type": "backlink",
+          "position": {
+            "start": {
+              "line": 15,
+              "column": 25,
+              "offset": 762
+            },
+            "end": {
+              "line": 15,
+              "column": 62,
+              "offset": 799
+            },
+            "indent": []
+          },
+          "value": "web.frontend.rendering-strategies"
+        }
+      ],
+      "anchors": {
+        "csr-client-side-rendering--spa-single-page-application": {
+          "type": "header",
+          "text": "CSR (Client-Side Rendering) / SPA (Single Page Application)",
+          "value": "csr-client-side-rendering--spa-single-page-application",
+          "line": 8,
+          "column": 0,
+          "depth": 2
+        },
+        "ssr-server-side-rendering": {
+          "type": "header",
+          "text": "SSR (Server Side Rendering)",
+          "value": "ssr-server-side-rendering",
+          "line": 29,
+          "column": 0,
+          "depth": 2
+        },
+        "ssg-static-site-generating": {
+          "type": "header",
+          "text": "SSG (Static-Site Generating)",
+          "value": "ssg-static-site-generating",
+          "line": 35,
+          "column": 0,
+          "depth": 2
+        },
+        "isr-incremental-static-regeneration": {
+          "type": "header",
+          "text": "ISR (Incremental Static Regeneration)",
+          "value": "isr-incremental-static-regeneration",
+          "line": 41,
+          "column": 0,
+          "depth": 2
+        },
+        "when-to-use-what": {
+          "type": "header",
+          "text": "When to use what?",
+          "value": "when-to-use-what",
+          "line": 47,
+          "column": 0,
+          "depth": 2
+        },
+        "references": {
+          "type": "header",
+          "text": "References",
+          "value": "references",
+          "line": 71,
+          "column": 0,
+          "depth": 5
+        }
+      },
+      "children": [],
+      "parent": "RhPwsgMN0xuoggGXxjHXh",
+      "data": {}
+    },
+    "hgdm976sbzlf57pyokf3u8v": {
+      "id": "hgdm976sbzlf57pyokf3u8v",
+      "title": "History of Front-End",
+      "desc": "",
+      "updated": 1659501625145,
+      "created": 1659405418362,
+      "custom": {},
+      "fname": "web.frontend.history",
+      "type": "note",
+      "vault": {
+        "fsPath": "vault"
+      },
+      "contentHash": "fc4149c75df5fd440aec4c09eeab9799",
+      "links": [
+        {
+          "type": "wiki",
+          "from": {
+            "fname": "web.frontend.history",
+            "id": "hgdm976sbzlf57pyokf3u8v",
+            "vaultName": "vault"
+          },
+          "value": "user.todo",
+          "alias": "@todo",
+          "position": {
+            "start": {
+              "line": 49,
+              "column": 4,
+              "offset": 1917
+            },
+            "end": {
+              "line": 49,
+              "column": 9,
+              "offset": 1922
+            },
+            "indent": []
+          },
+          "xvault": false,
+          "to": {
+            "fname": "user.todo"
+          }
+        }
+      ],
+      "anchors": {
+        "1989": {
+          "type": "header",
+          "text": "1989",
+          "value": "1989",
+          "line": 8,
+          "column": 0,
+          "depth": 2
+        },
+        "1990-1993---web-10": {
+          "type": "header",
+          "text": "1990-1993 - Web 1.0:",
+          "value": "1990-1993---web-10",
+          "line": 11,
+          "column": 0,
+          "depth": 2
+        },
+        "1993---1999---dynamic-websites": {
+          "type": "header",
+          "text": "1993 - 1999 - Dynamic websites",
+          "value": "1993---1999---dynamic-websites",
+          "line": 20,
+          "column": 0,
+          "depth": 2
+        },
+        "2000s---web-20": {
+          "type": "header",
+          "text": "2000s - Web 2.0:",
+          "value": "2000s---web-20",
+          "line": 28,
+          "column": 0,
+          "depth": 2
+        },
+        "2000-2006": {
+          "type": "header",
+          "text": "2000-2006",
+          "value": "2000-2006",
+          "line": 38,
+          "column": 0,
+          "depth": 2
+        },
+        "mobile-era-2007-2010": {
+          "type": "header",
+          "text": "Mobile Era (2007-2010)",
+          "value": "mobile-era-2007-2010",
+          "line": 47,
+          "column": 0,
+          "depth": 2
+        },
+        "2010---present": {
+          "type": "header",
+          "text": "2010 - present",
+          "value": "2010---present",
+          "line": 53,
+          "column": 0,
+          "depth": 2
+        }
+      },
+      "children": [],
+      "parent": "RhPwsgMN0xuoggGXxjHXh",
+      "data": {}
+    },
+    "qj2rqad3fu03nbzrzybffsr": {
+      "id": "qj2rqad3fu03nbzrzybffsr",
+      "title": "Design Systems",
+      "desc": "",
+      "updated": 1647478947669,
+      "created": 1647398584322,
+      "custom": {},
+      "fname": "web.frontend.design-systems",
+      "type": "note",
+      "vault": {
+        "fsPath": "vault"
+      },
+      "contentHash": "29c5d0ed8a5112e26c775d2e81789b36",
+      "links": [],
+      "anchors": {
+        "design-tokens": {
+          "type": "header",
+          "text": "Design Tokens",
+          "value": "design-tokens",
+          "line": 14,
+          "column": 0,
+          "depth": 3
+        },
+        "references": {
+          "type": "header",
+          "text": "References",
+          "value": "references",
+          "line": 18,
+          "column": 0,
+          "depth": 4
+        }
+      },
+      "children": [],
+      "parent": "RhPwsgMN0xuoggGXxjHXh",
+      "data": {}
+    },
+    "w9sialel0j2a8iwov83o0qb": {
+      "id": "w9sialel0j2a8iwov83o0qb",
+      "title": "Frameworks",
+      "desc": "",
+      "updated": 1676283216551,
+      "created": 1676281465565,
+      "custom": {},
+      "fname": "web.frameworks",
+      "type": "note",
+      "vault": {
+        "fsPath": "vault"
+      },
+      "contentHash": "e11df5fe631c15a64ac494e0aac83fa1",
+      "links": [],
+      "anchors": {
+        "rendering": {
+          "type": "header",
+          "text": "Rendering",
+          "value": "rendering",
+          "line": 10,
+          "column": 0,
+          "depth": 2
+        },
+        "pre-rendering": {
+          "type": "header",
+          "text": "Pre-rendering",
+          "value": "pre-rendering",
+          "line": 16,
+          "column": 0,
+          "depth": 2
+        },
+        "interactivity": {
+          "type": "header",
+          "text": "Interactivity",
+          "value": "interactivity",
+          "line": 22,
+          "column": 0,
+          "depth": 2
+        },
+        "resumability": {
+          "type": "header",
+          "text": "Resumability",
+          "value": "resumability",
+          "line": 30,
+          "column": 0,
+          "depth": 2
+        }
+      },
+      "children": [],
+      "parent": "8HZ1TTh4HUtNFePL29cg7",
+      "data": {}
+    },
+    "1y1y9h9mi8y9k3i44znhfg3": {
+      "id": "1y1y9h9mi8y9k3i44znhfg3",
+      "title": "Backend",
+      "desc": "",
+      "updated": 1645610685140,
+      "created": 1645609882684,
+      "custom": {},
+      "fname": "web.backend",
+      "type": "note",
+      "vault": {
+        "fsPath": "vault"
+      },
+      "contentHash": "074dae498869eb4026029059f7a9405f",
+      "links": [],
+      "anchors": {},
+      "children": [
+        "yskq69lbyw4kpr8y5sdx9lu",
+        "pjj5em4sf413tfn6ua9tqdw"
+      ],
+      "parent": "8HZ1TTh4HUtNFePL29cg7",
+      "data": {}
+    },
+    "pjj5em4sf413tfn6ua9tqdw": {
+      "id": "pjj5em4sf413tfn6ua9tqdw",
+      "title": "Database",
+      "desc": "",
+      "updated": 1645744667669,
+      "created": 1645609938784,
+      "custom": {},
+      "fname": "web.backend.database",
+      "type": "note",
+      "vault": {
+        "fsPath": "vault"
+      },
+      "contentHash": "63c243da703b8caa8c053c4dfd17f1af",
+      "links": [],
+      "anchors": {
+        "types": {
+          "type": "header",
+          "text": "Types",
+          "value": "types",
+          "line": 8,
+          "column": 0,
+          "depth": 2
+        },
+        "relational-sql": {
+          "type": "header",
+          "text": "Relational (SQL)",
+          "value": "relational-sql",
+          "line": 10,
+          "column": 0,
+          "depth": 3
+        },
+        "non-relational-no-sql": {
+          "type": "header",
+          "text": "Non-relational (No SQL)",
+          "value": "non-relational-no-sql",
+          "line": 48,
+          "column": 0,
+          "depth": 3
+        },
+        "relational-or-non-relational": {
+          "type": "header",
+          "text": "Relational or Non-relational?",
+          "value": "relational-or-non-relational",
+          "line": 50,
+          "column": 0,
+          "depth": 3
+        },
+        "references": {
+          "type": "header",
+          "text": "References",
+          "value": "references",
+          "line": 52,
+          "column": 0,
+          "depth": 4
+        }
+      },
+      "children": [],
+      "parent": "1y1y9h9mi8y9k3i44znhfg3",
+      "data": {}
+    },
+    "yskq69lbyw4kpr8y5sdx9lu": {
+      "id": "yskq69lbyw4kpr8y5sdx9lu",
+      "title": "API Architecture",
+      "desc": "",
+      "updated": 1646348040958,
+      "created": 1646047028554,
+      "custom": {},
+      "fname": "web.backend.api-architecture",
+      "type": "note",
+      "vault": {
+        "fsPath": "vault"
+      },
+      "contentHash": "ecff5c00834623cf1b42f9542b738730",
+      "links": [],
+      "anchors": {
+        "rpc---remote-procedure-call": {
+          "type": "header",
+          "text": "RPC - Remote Procedure Call",
+          "value": "rpc---remote-procedure-call",
+          "line": 10,
+          "column": 0,
+          "depth": 2
+        },
+        "disadvantages": {
+          "type": "header",
+          "text": "Disadvantages",
+          "value": "disadvantages",
+          "line": 78,
+          "column": 0,
+          "depth": 3
+        },
+        "advantages": {
+          "type": "header",
+          "text": "Advantages",
+          "value": "advantages",
+          "line": 100,
+          "column": 0,
+          "depth": 3
+        },
+        "grpc": {
+          "type": "header",
+          "text": "gRPC",
+          "value": "grpc",
+          "line": 106,
+          "column": 0,
+          "depth": 3
+        },
+        "rest": {
+          "type": "header",
+          "text": "REST",
+          "value": "rest",
+          "line": 149,
+          "column": 0,
+          "depth": 2
+        },
+        "references": {
+          "type": "header",
+          "text": "References",
+          "value": "references",
+          "line": 172,
+          "column": 0,
+          "depth": 4
+        }
+      },
+      "children": [],
+      "parent": "1y1y9h9mi8y9k3i44znhfg3",
+      "data": {}
+    },
+    "7ra6xjfnrjel3qewtmik5uk": {
+      "id": "7ra6xjfnrjel3qewtmik5uk",
+      "title": "Auth",
+      "desc": "",
+      "updated": 1705663361982,
+      "created": 1705663306768,
+      "custom": {},
+      "fname": "web.auth",
+      "type": "note",
+      "vault": {
+        "fsPath": "vault"
+      },
+      "contentHash": "244549b463449b0abdf553ca684103c4",
+      "links": [],
+      "anchors": {},
+      "children": [],
+      "parent": "8HZ1TTh4HUtNFePL29cg7",
+      "data": {}
+    },
+    "aig5i0xuh2jq0ibzfq8sz22": {
+      "id": "aig5i0xuh2jq0ibzfq8sz22",
+      "title": "Reactive Programming",
+      "desc": "",
+      "updated": 1673861535837,
+      "created": 1672719811772,
+      "custom": {},
+      "fname": "reactive-programming",
+      "type": "note",
+      "vault": {
+        "fsPath": "vault"
+      },
+      "contentHash": "d7de602865fb985fd469b04e543e7b16",
+      "links": [],
+      "anchors": {
+        "references": {
+          "type": "header",
+          "text": "References:",
+          "value": "references",
+          "line": 23,
+          "column": 0,
+          "depth": 4
+        }
+      },
+      "children": [
+        "7izbnov3vo8esfmctmtyjyi"
+      ],
+      "parent": "wn8PE1RhG0znK1alrGFYv",
+      "data": {}
+    },
+    "7izbnov3vo8esfmctmtyjyi": {
+      "id": "7izbnov3vo8esfmctmtyjyi",
+      "title": "Reactive Programming In Java (Course Notes)",
+      "desc": "",
+      "updated": 1674465616111,
+      "created": 1672819245128,
+      "custom": {},
+      "fname": "reactive-programming.java-course",
+      "type": "note",
+      "vault": {
+        "fsPath": "vault"
+      },
+      "contentHash": "e9d1edfaff339e97a471f5e0850f6c2e",
+      "links": [],
+      "anchors": {},
+      "children": [],
+      "parent": "aig5i0xuh2jq0ibzfq8sz22",
+      "data": {}
+    },
+    "5c0e9ifp2lh9imgp1zahq33": {
+      "id": "5c0e9ifp2lh9imgp1zahq33",
+      "title": "React",
+      "desc": "",
+      "updated": 1690197646412,
+      "created": 1690197624874,
+      "custom": {},
+      "fname": "react",
+      "type": "note",
+      "vault": {
+        "fsPath": "vault"
+      },
+      "contentHash": "d8dbed563043340dcd92a6a58a1cee46",
+      "links": [],
+      "anchors": {
+        "release-18-features": {
+          "type": "header",
+          "text": "Release 18 Features",
+          "value": "release-18-features",
+          "line": 8,
+          "column": 0,
+          "depth": 2
+        }
+      },
+      "children": [
+        "ukykaohmobw0jq89d1mm5ls"
+      ],
+      "parent": "wn8PE1RhG0znK1alrGFYv",
+      "data": {}
+    },
+    "ukykaohmobw0jq89d1mm5ls": {
+      "id": "ukykaohmobw0jq89d1mm5ls",
+      "title": "React v18.0",
+      "desc": "",
+      "updated": 1690593828838,
+      "created": 1690197715972,
+      "custom": {},
+      "fname": "react.v18-0",
+      "type": "note",
+      "vault": {
+        "fsPath": "vault"
+      },
+      "contentHash": "125629c5fe6ccabd843e766546dbc20b",
+      "links": [],
+      "anchors": {
+        "concurrent-rendering": {
+          "type": "header",
+          "text": "Concurrent Rendering",
+          "value": "concurrent-rendering",
+          "line": 8,
+          "column": 0,
+          "depth": 2
+        },
+        "automatic-batching": {
+          "type": "header",
+          "text": "Automatic Batching",
+          "value": "automatic-batching",
+          "line": 16,
+          "column": 0,
+          "depth": 2
+        },
+        "transitions": {
+          "type": "header",
+          "text": "Transitions",
+          "value": "transitions",
+          "line": 18,
+          "column": 0,
+          "depth": 2
+        },
+        "new-suspense-features": {
+          "type": "header",
+          "text": "New Suspense Features",
+          "value": "new-suspense-features",
+          "line": 20,
+          "column": 0,
+          "depth": 2
+        },
+        "new-client-and-server-rendering-api": {
+          "type": "header",
+          "text": "New Client and Server Rendering API",
+          "value": "new-client-and-server-rendering-api",
+          "line": 22,
+          "column": 0,
+          "depth": 2
+        },
+        "new-strict-mode-behaviors": {
+          "type": "header",
+          "text": "New Strict Mode Behaviors",
+          "value": "new-strict-mode-behaviors",
+          "line": 24,
+          "column": 0,
+          "depth": 2
+        },
+        "new-hooks": {
+          "type": "header",
+          "text": "New Hooks",
+          "value": "new-hooks",
+          "line": 26,
+          "column": 0,
+          "depth": 2
+        }
+      },
+      "children": [],
+      "parent": "5c0e9ifp2lh9imgp1zahq33",
+      "data": {}
+    },
+    "6FtP5bCaxDDd47jEuSH5y": {
+      "id": "6FtP5bCaxDDd47jEuSH5y",
+      "title": "Projects",
+      "desc": "",
+      "updated": 1644384425192,
+      "created": 1644384425192,
+      "custom": {},
+      "fname": "projects",
+      "type": "note",
+      "vault": {
+        "fsPath": "vault"
+      },
+      "contentHash": "2cd2eb3eada4fb80721808832a38fe72",
+      "links": [],
+      "anchors": {},
+      "children": [
+        "VGLSQgjkL1invoOn1WIVU"
+      ],
+      "parent": "wn8PE1RhG0znK1alrGFYv",
+      "data": {}
+    },
+    "VGLSQgjkL1invoOn1WIVU": {
+      "id": "VGLSQgjkL1invoOn1WIVU",
+      "title": "Operation Rewrite",
+      "desc": "",
+      "updated": 1645087917572,
+      "created": 1644384514239,
+      "custom": {},
+      "fname": "projects.operation-rewrite",
+      "type": "note",
+      "vault": {
+        "fsPath": "vault"
+      },
+      "contentHash": "28580c3472a24101a1666db5b7294ada",
+      "links": [
+        {
+          "type": "wiki",
+          "from": {
+            "fname": "projects.operation-rewrite",
+            "id": "VGLSQgjkL1invoOn1WIVU",
+            "vaultName": "vault"
+          },
+          "value": "web.frontend.rendering-strategies",
+          "position": {
+            "start": {
+              "line": 28,
+              "column": 5,
+              "offset": 660
+            },
+            "end": {
+              "line": 28,
+              "column": 42,
+              "offset": 697
+            },
+            "indent": []
+          },
+          "xvault": false,
+          "sameFile": false,
+          "to": {
+            "fname": "web.frontend.rendering-strategies"
+          }
+        }
+      ],
+      "anchors": {
+        "project-operation-re-write-purposely-obscure": {
+          "type": "header",
+          "text": "Project: Operation Re-write (Purposely obscure)",
+          "value": "project-operation-re-write-purposely-obscure",
+          "line": 8,
+          "column": 0,
+          "depth": 2
+        },
+        "problem": {
+          "type": "header",
+          "text": "Problem:",
+          "value": "problem",
+          "line": 10,
+          "column": 0,
+          "depth": 3
+        },
+        "solution": {
+          "type": "header",
+          "text": "Solution:",
+          "value": "solution",
+          "line": 14,
+          "column": 0,
+          "depth": 3
+        },
+        "existing-stack": {
+          "type": "header",
+          "text": "Existing stack",
+          "value": "existing-stack",
+          "line": 18,
+          "column": 0,
+          "depth": 3
+        },
+        "proposed-re-architected-stack": {
+          "type": "header",
+          "text": "Proposed re-architected stack:",
+          "value": "proposed-re-architected-stack",
+          "line": 25,
+          "column": 0,
+          "depth": 3
+        },
+        "rendering-style": {
+          "type": "header",
+          "text": "Rendering Style",
+          "value": "rendering-style",
+          "line": 32,
+          "column": 0,
+          "depth": 3
+        },
+        "framework-options": {
+          "type": "header",
+          "text": "Framework Options",
+          "value": "framework-options",
+          "line": 42,
+          "column": 0,
+          "depth": 3
+        },
+        "headless-cms-options": {
+          "type": "header",
+          "text": "Headless CMS Options",
+          "value": "headless-cms-options",
+          "line": 48,
+          "column": 0,
+          "depth": 3
+        },
+        "db": {
+          "type": "header",
+          "text": "DB?",
+          "value": "db",
+          "line": 53,
+          "column": 0,
+          "depth": 3
+        },
+        "build-steps": {
+          "type": "header",
+          "text": "Build steps",
+          "value": "build-steps",
+          "line": 59,
+          "column": 0,
+          "depth": 2
+        }
+      },
+      "children": [],
+      "parent": "6FtP5bCaxDDd47jEuSH5y",
+      "data": {}
+    },
+    "XZTCg1c8mZeR9jEyM2HOy": {
+      "id": "XZTCg1c8mZeR9jEyM2HOy",
+      "title": "Programming Paradigms",
+      "desc": "",
+      "updated": 1644382520479,
+      "created": 1644210058326,
+      "custom": {},
+      "fname": "programming-paradigms",
+      "type": "note",
+      "vault": {
+        "fsPath": "vault"
+      },
+      "contentHash": "09b1697f0eb1eece7e3deb827640b769",
+      "links": [],
+      "anchors": {
+        "imperative": {
+          "type": "header",
+          "text": "Imperative",
+          "value": "imperative",
+          "line": 24,
+          "column": 0,
+          "depth": 2
+        },
+        "declarative": {
+          "type": "header",
+          "text": "Declarative",
+          "value": "declarative",
+          "line": 44,
+          "column": 0,
+          "depth": 2
+        },
+        "types-of-imperative-programming": {
+          "type": "header",
+          "text": "Types of Imperative Programming",
+          "value": "types-of-imperative-programming",
+          "line": 56,
+          "column": 0,
+          "depth": 2
+        },
+        "procedural-programming": {
+          "type": "header",
+          "text": "Procedural Programming",
+          "value": "procedural-programming",
+          "line": 58,
+          "column": 0,
+          "depth": 3
+        },
+        "object-oriented-programming": {
+          "type": "header",
+          "text": "Object-oriented Programming",
+          "value": "object-oriented-programming",
+          "line": 80,
+          "column": 0,
+          "depth": 3
+        },
+        "types-of-declarative-programming": {
+          "type": "header",
+          "text": "Types of Declarative Programming",
+          "value": "types-of-declarative-programming",
+          "line": 91,
+          "column": 0,
+          "depth": 2
+        },
+        "logical-programming": {
+          "type": "header",
+          "text": "Logical programming",
+          "value": "logical-programming",
+          "line": 93,
+          "column": 0,
+          "depth": 3
+        },
+        "functional-programming": {
+          "type": "header",
+          "text": "Functional programming",
+          "value": "functional-programming",
+          "line": 99,
+          "column": 0,
+          "depth": 3
+        }
+      },
+      "children": [],
+      "parent": "wn8PE1RhG0znK1alrGFYv",
+      "data": {}
+    },
+    "zbqz5oql3yy88t9yf8q9mtz": {
+      "id": "zbqz5oql3yy88t9yf8q9mtz",
+      "title": "Nextjs",
+      "desc": "",
+      "updated": 1707554604205,
+      "created": 1707529949723,
+      "custom": {},
+      "fname": "nextjs",
+      "type": "note",
+      "vault": {
+        "fsPath": "vault"
+      },
+      "contentHash": "59aa89238c67218a6d3181afa0f978a5",
+      "links": [],
+      "anchors": {
+        "post-140-notes-and-usage": {
+          "type": "header",
+          "text": "Post 14.0 notes and usage",
+          "value": "post-140-notes-and-usage",
+          "line": 8,
+          "column": 0,
+          "depth": 2
+        },
+        "routing": {
+          "type": "header",
+          "text": "Routing",
+          "value": "routing",
+          "line": 10,
+          "column": 0,
+          "depth": 3
+        },
+        "file-conventions": {
+          "type": "header",
+          "text": "File conventions",
+          "value": "file-conventions",
+          "line": 47,
+          "column": 0,
+          "depth": 3
+        },
+        "data-fetching": {
+          "type": "header",
+          "text": "Data Fetching",
+          "value": "data-fetching",
+          "line": 58,
+          "column": 0,
+          "depth": 3
+        },
+        "on-the-server": {
+          "type": "header",
+          "text": "On the server",
+          "value": "on-the-server",
+          "line": 60,
+          "column": 0,
+          "depth": 4
+        },
+        "on-the-client": {
+          "type": "header",
+          "text": "On the client",
+          "value": "on-the-client",
+          "line": 88,
+          "column": 0,
+          "depth": 4
+        },
+        "data-fetching-recommendations": {
+          "type": "header",
+          "text": "Data fetching recommendations",
+          "value": "data-fetching-recommendations",
+          "line": 96,
+          "column": 0,
+          "depth": 3
+        }
+      },
+      "children": [],
+      "parent": "wn8PE1RhG0znK1alrGFYv",
+      "data": {}
+    },
+    "514eyidh124uj7yywy9os9z": {
+      "id": "514eyidh124uj7yywy9os9z",
+      "title": "Machine Setup",
+      "desc": "",
+      "updated": 1659182705440,
+      "created": 1659180652543,
+      "custom": {},
+      "fname": "machine-setup",
+      "type": "note",
+      "vault": {
+        "fsPath": "vault"
+      },
+      "contentHash": "0f4ab8f7a27830a35a601775ae7482f8",
+      "links": [],
+      "anchors": {
+        "programs": {
+          "type": "header",
+          "text": "Programs",
+          "value": "programs",
+          "line": 10,
+          "column": 0,
+          "depth": 2
+        },
+        "configuration-files": {
+          "type": "header",
+          "text": "Configuration files",
+          "value": "configuration-files",
+          "line": 22,
+          "column": 0,
+          "depth": 2
+        },
+        "vim": {
+          "type": "header",
+          "text": "vim",
+          "value": "vim",
+          "line": 24,
+          "column": 0,
+          "depth": 3
+        },
+        "tmux": {
+          "type": "header",
+          "text": "tmux",
+          "value": "tmux",
+          "line": 47,
+          "column": 0,
+          "depth": 2
+        },
+        "zhrc": {
+          "type": "header",
+          "text": "zhrc",
+          "value": "zhrc",
+          "line": 72,
+          "column": 0,
+          "depth": 2
+        }
+      },
+      "children": [],
+      "parent": "wn8PE1RhG0znK1alrGFYv",
+      "data": {}
+    },
+    "8h567033xcainsquqy92vos": {
+      "id": "8h567033xcainsquqy92vos",
+      "title": "Data structures & Algorithms",
+      "desc": "",
+      "updated": 1722508454209,
+      "created": 1722508391404,
+      "custom": {},
+      "fname": "dsa",
+      "type": "note",
+      "vault": {
+        "fsPath": "vault"
+      },
+      "contentHash": "93b4941d25fd89b8ed7fac7cf4384833",
+      "links": [],
+      "anchors": {},
+      "children": [
+        "wa8cjffobtlydrquwrdvri8"
+      ],
+      "parent": "wn8PE1RhG0znK1alrGFYv",
+      "data": {}
+    },
+    "wa8cjffobtlydrquwrdvri8": {
+      "id": "wa8cjffobtlydrquwrdvri8",
+      "title": "Leetcode",
+      "desc": "",
+      "updated": 1722508763660,
+      "created": 1722508396283,
+      "custom": {},
+      "fname": "dsa.leetcode",
+      "type": "note",
+      "vault": {
+        "fsPath": "vault"
+      },
+      "contentHash": "6432162897bc6b75e5c3e893253459c6",
+      "links": [],
+      "anchors": {
+        "leetcode-solutions--explanation": {
+          "type": "header",
+          "text": "Leetcode solutions + explanation",
+          "value": "leetcode-solutions--explanation",
+          "line": 8,
+          "column": 0,
+          "depth": 3
+        },
+        "53maximum-subarray": {
+          "type": "header",
+          "text": "53.Maximum Subarray",
+          "value": "53maximum-subarray",
+          "line": 11,
+          "column": 0,
+          "depth": 3
+        },
+        "approach": {
+          "type": "header",
+          "text": "Approach",
+          "value": "approach",
+          "line": 15,
+          "column": 0,
+          "depth": 4
+        },
+        "solution": {
+          "type": "header",
+          "text": "Solution",
+          "value": "solution",
+          "line": 30,
+          "column": 0,
+          "depth": 4
+        }
+      },
+      "children": [],
+      "parent": "8h567033xcainsquqy92vos",
+      "data": {}
+    },
+    "7w0mtdy9yip2z8dm44sazxg": {
+      "id": "7w0mtdy9yip2z8dm44sazxg",
+      "title": "Architecture",
+      "desc": "",
+      "updated": 1731976743982,
+      "created": 1647478689306,
+      "custom": {},
+      "fname": "architecture",
+      "type": "note",
+      "vault": {
+        "fsPath": "vault"
+      },
+      "contentHash": "9160efa06669486834a2bdac03148960",
+      "links": [
+        {
+          "type": "wiki",
+          "from": {
+            "fname": "architecture",
+            "id": "7w0mtdy9yip2z8dm44sazxg",
+            "vaultName": "vault"
+          },
+          "value": "architecture.CQRS",
+          "alias": "Read more",
+          "position": {
+            "start": {
+              "line": 29,
+              "column": 1,
+              "offset": 1949
+            },
+            "end": {
+              "line": 29,
+              "column": 32,
+              "offset": 1980
+            },
+            "indent": []
+          },
+          "xvault": false,
+          "sameFile": false,
+          "to": {
+            "fname": "architecture.CQRS"
+          }
+        },
+        {
+          "from": {
+            "fname": "architecture.hexagonal",
+            "id": "7gq4n7i7t84iqthitoblipc",
+            "vaultName": "vault"
+          },
+          "type": "backlink",
+          "position": {
+            "start": {
+              "line": 52,
+              "column": 95,
+              "offset": 3755
+            },
+            "end": {
+              "line": 52,
+              "column": 171,
+              "offset": 3831
+            },
+            "indent": []
+          },
+          "value": "architecture"
+        }
+      ],
+      "anchors": {
+        "types-of-architectures": {
+          "type": "header",
+          "text": "Types of Architectures",
+          "value": "types-of-architectures",
+          "line": 10,
+          "column": 0,
+          "depth": 2
+        },
+        "monolithic-architecture": {
+          "type": "header",
+          "text": "Monolithic Architecture",
+          "value": "monolithic-architecture",
+          "line": 12,
+          "column": 0,
+          "depth": 3
+        },
+        "microservices-architecture": {
+          "type": "header",
+          "text": "Microservices Architecture",
+          "value": "microservices-architecture",
+          "line": 17,
+          "column": 0,
+          "depth": 3
+        },
+        "patterns-and-design-principles": {
+          "type": "header",
+          "text": "Patterns and Design Principles",
+          "value": "patterns-and-design-principles",
+          "line": 25,
+          "column": 0,
+          "depth": 2
+        },
+        "command-query-responsibility-segregation-cqrs": {
+          "type": "header",
+          "text": "Command Query Responsibility Segregation (CQRS)",
+          "value": "command-query-responsibility-segregation-cqrs",
+          "line": 27,
+          "column": 0,
+          "depth": 3
+        },
+        "acid--cap-theorem": {
+          "type": "header",
+          "text": "ACID & CAP Theorem",
+          "value": "acid--cap-theorem",
+          "line": 37,
+          "column": 0,
+          "depth": 3
+        }
+      },
+      "children": [
+        "x9svkv1c2vvyef4l5xjdmps",
+        "gb52lee4nm5k27xqxprhu2w",
+        "lncbqck7txvsvlv4qjkdmzd",
+        "7gq4n7i7t84iqthitoblipc",
+        "966coupiif7uop6ntjy7ztu",
+        "fqi20n3dabq8rhrs04h6tk3"
+      ],
+      "parent": "wn8PE1RhG0znK1alrGFYv",
+      "data": {}
+    },
+    "fqi20n3dabq8rhrs04h6tk3": {
+      "id": "fqi20n3dabq8rhrs04h6tk3",
+      "title": "Tech Fundamentals",
+      "desc": "",
+      "updated": 1735786487556,
+      "created": 1734584183713,
+      "custom": {},
+      "fname": "architecture.tech-fundamentals",
+      "type": "note",
+      "vault": {
+        "fsPath": "vault"
+      },
+      "contentHash": "3925278d794642e9b9785df41aa27f9d",
+      "links": [
+        {
+          "from": {
+            "fname": "architecture.aws.solutions-architect-associate",
+            "id": "jeybygpftmwnk69ylywov78",
+            "vaultName": "vault"
+          },
+          "type": "backlink",
+          "position": {
+            "start": {
+              "line": 25,
+              "column": 1,
+              "offset": 1301
+            },
+            "end": {
+              "line": 25,
+              "column": 35,
+              "offset": 1335
+            },
+            "indent": []
+          },
+          "value": "architecture.tech-fundamentals"
+        }
+      ],
+      "anchors": {
+        "osi-model": {
+          "type": "header",
+          "text": "OSI Model",
+          "value": "osi-model",
+          "line": 10,
+          "column": 0,
+          "depth": 2
+        },
+        "physical-layer-layer-1": {
+          "type": "header",
+          "text": "Physical Layer (Layer 1)",
+          "value": "physical-layer-layer-1",
+          "line": 34,
+          "column": 0,
+          "depth": 3
+        },
+        "data-link-layer-layer-2": {
+          "type": "header",
+          "text": "Data Link Layer (Layer 2)",
+          "value": "data-link-layer-layer-2",
+          "line": 44,
+          "column": 0,
+          "depth": 3
+        },
+        "network-layer-layer-3": {
+          "type": "header",
+          "text": "Network Layer (Layer 3)",
+          "value": "network-layer-layer-3",
+          "line": 64,
+          "column": 0,
+          "depth": 3
+        },
+        "transport-layer-layer-4": {
+          "type": "header",
+          "text": "Transport Layer (Layer 4)",
+          "value": "transport-layer-layer-4",
+          "line": 78,
+          "column": 0,
+          "depth": 3
+        },
+        "session-layer-layer-5": {
+          "type": "header",
+          "text": "Session Layer (Layer 5)",
+          "value": "session-layer-layer-5",
+          "line": 84,
+          "column": 0,
+          "depth": 3
+        },
+        "network-address-translation-nat": {
+          "type": "header",
+          "text": "Network Address Translation (NAT)",
+          "value": "network-address-translation-nat",
+          "line": 90,
+          "column": 0,
+          "depth": 3
+        },
+        "ip-address-space-and-subnetting": {
+          "type": "header",
+          "text": "IP Address Space and Subnetting",
+          "value": "ip-address-space-and-subnetting",
+          "line": 102,
+          "column": 0,
+          "depth": 3
+        },
+        "distributed-denial-of-service-ddos-attacks": {
+          "type": "header",
+          "text": "Distributed Denial of Service (DDoS) attacks",
+          "value": "distributed-denial-of-service-ddos-attacks",
+          "line": 119,
+          "column": 0,
+          "depth": 3
+        },
+        "vlans-trunks-and-qinq": {
+          "type": "header",
+          "text": "VLANS, TRUNKS and QinQ",
+          "value": "vlans-trunks-and-qinq",
+          "line": 129,
+          "column": 0,
+          "depth": 3
+        },
+        "ssl-and-tls": {
+          "type": "header",
+          "text": "SSL and TLS",
+          "value": "ssl-and-tls",
+          "line": 135,
+          "column": 0,
+          "depth": 3
+        }
+      },
+      "children": [],
+      "parent": "7w0mtdy9yip2z8dm44sazxg",
+      "data": {}
+    },
+    "966coupiif7uop6ntjy7ztu": {
+      "id": "966coupiif7uop6ntjy7ztu",
+      "title": "System Design",
+      "desc": "A glossary",
+      "updated": 1725629715936,
+      "created": 1725627803849,
+      "custom": {},
+      "fname": "architecture.system-design",
+      "type": "note",
+      "vault": {
+        "fsPath": "vault"
+      },
+      "contentHash": "e69ce47ee52517e61524c98219646444",
+      "links": [],
+      "anchors": {
+        "domain-name-system-dns": {
+          "type": "header",
+          "text": "Domain Name System (DNS)",
+          "value": "domain-name-system-dns",
+          "line": 8,
+          "column": 0,
+          "depth": 3
+        },
+        "load-balancer": {
+          "type": "header",
+          "text": "Load Balancer",
+          "value": "load-balancer",
+          "line": 14,
+          "column": 0,
+          "depth": 3
+        },
+        "api-gateway": {
+          "type": "header",
+          "text": "API Gateway",
+          "value": "api-gateway",
+          "line": 21,
+          "column": 0,
+          "depth": 3
+        },
+        "content-delivery-network-cdn": {
+          "type": "header",
+          "text": "Content Delivery Network (CDN)",
+          "value": "content-delivery-network-cdn",
+          "line": 26,
+          "column": 0,
+          "depth": 3
+        }
+      },
+      "children": [],
+      "parent": "7w0mtdy9yip2z8dm44sazxg",
+      "data": {}
+    },
+    "7gq4n7i7t84iqthitoblipc": {
+      "id": "7gq4n7i7t84iqthitoblipc",
+      "title": "Hexagonal Architecture",
+      "desc": "",
+      "updated": 1732595981915,
+      "created": 1731454274600,
+      "custom": {},
+      "fname": "architecture.hexagonal",
+      "type": "note",
+      "vault": {
+        "fsPath": "vault"
+      },
+      "contentHash": "7f3ac46f8d92afee4a1220c9a1bf8144",
+      "links": [
+        {
+          "type": "wiki",
+          "from": {
+            "fname": "architecture.hexagonal",
+            "id": "7gq4n7i7t84iqthitoblipc",
+            "vaultName": "vault"
+          },
+          "value": "architecture",
+          "alias": "CQRS pattern",
+          "position": {
+            "start": {
+              "line": 52,
+              "column": 95,
+              "offset": 3755
+            },
+            "end": {
+              "line": 52,
+              "column": 171,
+              "offset": 3831
+            },
+            "indent": []
+          },
+          "xvault": false,
+          "sameFile": false,
+          "to": {
+            "fname": "architecture",
+            "anchorHeader": "command-query-responsibility-segregation-cqrs"
+          }
+        }
+      ],
+      "anchors": {
+        "background": {
+          "type": "header",
+          "text": "Background",
+          "value": "background",
+          "line": 8,
+          "column": 0,
+          "depth": 3
+        },
+        "breakdown-of-architecture": {
+          "type": "header",
+          "text": "Breakdown of architecture:",
+          "value": "breakdown-of-architecture",
+          "line": 26,
+          "column": 0,
+          "depth": 3
+        },
+        "the-hexagon": {
+          "type": "header",
+          "text": "The Hexagon",
+          "value": "the-hexagon",
+          "line": 32,
+          "column": 0,
+          "depth": 3
+        },
+        "actors": {
+          "type": "header",
+          "text": "Actors",
+          "value": "actors",
+          "line": 38,
+          "column": 0,
+          "depth": 3
+        },
+        "ports": {
+          "type": "header",
+          "text": "Ports",
+          "value": "ports",
+          "line": 52,
+          "column": 0,
+          "depth": 3
+        },
+        "adapters": {
+          "type": "header",
+          "text": "Adapters",
+          "value": "adapters",
+          "line": 66,
+          "column": 0,
+          "depth": 3
+        },
+        "other": {
+          "type": "header",
+          "text": "Other",
+          "value": "other",
+          "line": 80,
+          "column": 0,
+          "depth": 3
+        },
+        "example-implementation-references-repositories": {
+          "type": "header",
+          "text": "Example implementation references (Repositories)",
+          "value": "example-implementation-references-repositories",
+          "line": 91,
+          "column": 0,
+          "depth": 3
+        },
+        "references": {
+          "type": "header",
+          "text": "References",
+          "value": "references",
+          "line": 98,
+          "column": 0,
+          "depth": 4
+        }
+      },
+      "children": [],
+      "parent": "7w0mtdy9yip2z8dm44sazxg",
+      "data": {}
+    },
+    "lncbqck7txvsvlv4qjkdmzd": {
+      "id": "lncbqck7txvsvlv4qjkdmzd",
+      "title": "Code Repositories",
+      "desc": "",
+      "updated": 1654604300354,
+      "created": 1647478912120,
+      "custom": {},
+      "fname": "architecture.code-repositories",
+      "type": "note",
+      "vault": {
+        "fsPath": "vault"
+      },
+      "contentHash": "d7edc0f1b5f836180837f8bd7374bbb9",
+      "links": [],
+      "anchors": {
+        "handling-multiple-related-projects": {
+          "type": "header",
+          "text": "Handling multiple related projects:",
+          "value": "handling-multiple-related-projects",
+          "line": 9,
+          "column": 0,
+          "depth": 5
+        },
+        "monorepos": {
+          "type": "header",
+          "text": "Monorepos",
+          "value": "monorepos",
+          "line": 11,
+          "column": 0,
+          "depth": 2
+        },
+        "advantages": {
+          "type": "header",
+          "text": "Advantages",
+          "value": "advantages",
+          "line": 17,
+          "column": 0,
+          "depth": 3
+        },
+        "in-practice": {
+          "type": "header",
+          "text": "In practice",
+          "value": "in-practice",
+          "line": 28,
+          "column": 0,
+          "depth": 3
+        },
+        "references": {
+          "type": "header",
+          "text": "References",
+          "value": "references",
+          "line": 49,
+          "column": 0,
+          "depth": 4
+        }
+      },
+      "children": [],
+      "parent": "7w0mtdy9yip2z8dm44sazxg",
+      "data": {}
+    },
+    "gb52lee4nm5k27xqxprhu2w": {
+      "id": "gb52lee4nm5k27xqxprhu2w",
+      "title": "AWS",
+      "desc": "",
+      "updated": 1734562301719,
+      "created": 1734484555431,
+      "custom": {},
+      "fname": "architecture.aws",
+      "type": "note",
+      "vault": {
+        "fsPath": "vault"
+      },
+      "contentHash": "50bd37769cd6bea6d1ad21cdd5204775",
+      "links": [],
+      "anchors": {},
+      "children": [
+        "jeybygpftmwnk69ylywov78"
+      ],
+      "parent": "7w0mtdy9yip2z8dm44sazxg",
+      "data": {}
+    },
+    "jeybygpftmwnk69ylywov78": {
+      "id": "jeybygpftmwnk69ylywov78",
+      "title": "Solutions Architect Associate",
+      "desc": "Notes for the SAA certification",
+      "updated": 1736219913268,
+      "created": 1734484581601,
+      "custom": {},
+      "fname": "architecture.aws.solutions-architect-associate",
+      "type": "note",
+      "vault": {
+        "fsPath": "vault"
+      },
+      "contentHash": "64b9a895bb6e501fedf9d94fe2392456",
+      "links": [
+        {
+          "type": "wiki",
+          "from": {
+            "fname": "architecture.aws.solutions-architect-associate",
+            "id": "jeybygpftmwnk69ylywov78",
+            "vaultName": "vault"
+          },
+          "value": "architecture.tech-fundamentals",
+          "position": {
+            "start": {
+              "line": 25,
+              "column": 1,
+              "offset": 1301
+            },
+            "end": {
+              "line": 25,
+              "column": 35,
+              "offset": 1335
+            },
+            "indent": []
+          },
+          "xvault": false,
+          "sameFile": false,
+          "to": {
+            "fname": "architecture.tech-fundamentals"
+          }
+        }
+      ],
+      "anchors": {
+        "aws-accounts": {
+          "type": "header",
+          "text": "AWS Accounts",
+          "value": "aws-accounts",
+          "line": 10,
+          "column": 0,
+          "depth": 2
+        },
+        "technical-fundamentals": {
+          "type": "header",
+          "text": "Technical fundamentals",
+          "value": "technical-fundamentals",
+          "line": 28,
+          "column": 0,
+          "depth": 2
+        },
+        "aws-fundamentals": {
+          "type": "header",
+          "text": "AWS Fundamentals",
+          "value": "aws-fundamentals",
+          "line": 33,
+          "column": 0,
+          "depth": 2
+        },
+        "public-vs-private-services": {
+          "type": "header",
+          "text": "Public vs Private services",
+          "value": "public-vs-private-services",
+          "line": 35,
+          "column": 0,
+          "depth": 3
+        },
+        "aws-global-infrastructure": {
+          "type": "header",
+          "text": "AWS Global Infrastructure",
+          "value": "aws-global-infrastructure",
+          "line": 44,
+          "column": 0,
+          "depth": 3
+        },
+        "aws-default-virtual-private-cloud-vpc": {
+          "type": "header",
+          "text": "AWS Default Virtual Private Cloud (VPC)",
+          "value": "aws-default-virtual-private-cloud-vpc",
+          "line": 61,
+          "column": 0,
+          "depth": 3
+        },
+        "elastic-compute-cloud-ec2": {
+          "type": "header",
+          "text": "Elastic Compute Cloud (EC2)",
+          "value": "elastic-compute-cloud-ec2",
+          "line": 77,
+          "column": 0,
+          "depth": 3
+        },
+        "simple-storage-service-s3": {
+          "type": "header",
+          "text": "Simple Storage Service (S3)",
+          "value": "simple-storage-service-s3",
+          "line": 102,
+          "column": 0,
+          "depth": 3
+        },
+        "cloudformation-cfn-basics": {
+          "type": "header",
+          "text": "CloudFormation (CFN) basics",
+          "value": "cloudformation-cfn-basics",
+          "line": 134,
+          "column": 0,
+          "depth": 3
+        },
+        "cloudwatch-cw-basics": {
+          "type": "header",
+          "text": "CloudWatch (CW) Basics",
+          "value": "cloudwatch-cw-basics",
+          "line": 151,
+          "column": 0,
+          "depth": 3
+        },
+        "shared-responsibility-model": {
+          "type": "header",
+          "text": "Shared Responsibility Model",
+          "value": "shared-responsibility-model",
+          "line": 166,
+          "column": 0,
+          "depth": 3
+        },
+        "high-availability-vs-fault-tolerance-vs-disaster-recovery": {
+          "type": "header",
+          "text": "High-Availability vs Fault-Tolerance vs Disaster Recovery",
+          "value": "high-availability-vs-fault-tolerance-vs-disaster-recovery",
+          "line": 178,
+          "column": 0,
+          "depth": 3
+        },
+        "route53-r53-fundamentals": {
+          "type": "header",
+          "text": "Route53 (R53) Fundamentals",
+          "value": "route53-r53-fundamentals",
+          "line": 196,
+          "column": 0,
+          "depth": 3
+        },
+        "dns-record-types": {
+          "type": "header",
+          "text": "DNS Record Types",
+          "value": "dns-record-types",
+          "line": 210,
+          "column": 0,
+          "depth": 3
+        },
+        "iam-accounts-and-aws-organisations": {
+          "type": "header",
+          "text": "IAM, Accounts and AWS Organisations",
+          "value": "iam-accounts-and-aws-organisations",
+          "line": 233,
+          "column": 0,
+          "depth": 2
+        },
+        "iam-identity-policies": {
+          "type": "header",
+          "text": "IAM Identity Policies",
+          "value": "iam-identity-policies",
+          "line": 235,
+          "column": 0,
+          "depth": 3
+        },
+        "iam-users-and-arns": {
+          "type": "header",
+          "text": "IAM Users and ARNs",
+          "value": "iam-users-and-arns",
+          "line": 273,
+          "column": 0,
+          "depth": 3
+        },
+        "iam-groups": {
+          "type": "header",
+          "text": "IAM Groups",
+          "value": "iam-groups",
+          "line": 292,
+          "column": 0,
+          "depth": 3
+        }
+      },
+      "children": [],
+      "parent": "gb52lee4nm5k27xqxprhu2w",
+      "data": {}
+    },
+    "x9svkv1c2vvyef4l5xjdmps": {
+      "id": "x9svkv1c2vvyef4l5xjdmps",
+      "title": "CQRS",
+      "desc": "",
+      "updated": 1731885472528,
+      "created": 1731883600536,
+      "custom": {},
+      "fname": "architecture.CQRS",
+      "type": "note",
+      "vault": {
+        "fsPath": "vault"
+      },
+      "contentHash": "437869971497be7c318975c75900681d",
+      "links": [
+        {
+          "from": {
+            "fname": "architecture",
+            "id": "7w0mtdy9yip2z8dm44sazxg",
+            "vaultName": "vault"
+          },
+          "type": "backlink",
+          "position": {
+            "start": {
+              "line": 29,
+              "column": 1,
+              "offset": 1949
+            },
+            "end": {
+              "line": 29,
+              "column": 32,
+              "offset": 1980
+            },
+            "indent": []
+          },
+          "value": "architecture.CQRS"
+        }
+      ],
+      "anchors": {
+        "command-and-query-responsibility-segregation": {
+          "type": "header",
+          "text": "Command and Query Responsibility Segregation",
+          "value": "command-and-query-responsibility-segregation",
+          "line": 8,
+          "column": 0,
+          "depth": 2
+        },
+        "event-sourcing": {
+          "type": "header",
+          "text": "Event sourcing",
+          "value": "event-sourcing",
+          "line": 24,
+          "column": 0,
+          "depth": 4
+        }
+      },
+      "children": [],
+      "parent": "7w0mtdy9yip2z8dm44sazxg",
+      "data": {}
+    },
+    "bwlvrHRccHBUBhHu7Mh1G": {
+      "id": "bwlvrHRccHBUBhHu7Mh1G",
+      "title": "Agile",
+      "desc": "",
+      "updated": 1644116700322,
+      "created": 1644115992039,
+      "custom": {},
+      "fname": "agile",
+      "type": "note",
+      "vault": {
+        "fsPath": "vault"
+      },
+      "contentHash": "cfce2ff6aca424f02c948b42c03a41ad",
+      "links": [
+        {
+          "type": "wiki",
+          "from": {
+            "fname": "agile",
+            "id": "bwlvrHRccHBUBhHu7Mh1G",
+            "vaultName": "vault"
+          },
+          "value": "agile.manifesto",
+          "position": {
+            "start": {
+              "line": 6,
+              "column": 100,
+              "offset": 237
+            },
+            "end": {
+              "line": 6,
+              "column": 119,
+              "offset": 256
+            },
+            "indent": []
+          },
+          "xvault": false,
+          "sameFile": false,
+          "to": {
+            "fname": "agile.manifesto"
+          }
+        }
+      ],
+      "anchors": {},
+      "children": [
+        "ZjZvFbo2iYiX6bbffE2Xk",
+        "6679dhe403qyfwbdgoxnfow"
+      ],
+      "parent": "wn8PE1RhG0znK1alrGFYv",
+      "data": {}
+    },
+    "6679dhe403qyfwbdgoxnfow": {
+      "id": "6679dhe403qyfwbdgoxnfow",
+      "title": "Shape Up",
+      "desc": "",
+      "updated": 1733188601820,
+      "created": 1731976786839,
+      "custom": {},
+      "fname": "agile.shape-up",
+      "type": "note",
+      "vault": {
+        "fsPath": "vault"
+      },
+      "contentHash": "c60cedc075eb4af4342d10fede37f40c",
+      "links": [],
+      "anchors": {
+        "introduction": {
+          "type": "header",
+          "text": "Introduction",
+          "value": "introduction",
+          "line": 10,
+          "column": 0,
+          "depth": 2
+        },
+        "principles-of-shaping": {
+          "type": "header",
+          "text": "Principles of Shaping",
+          "value": "principles-of-shaping",
+          "line": 18,
+          "column": 0,
+          "depth": 3
+        },
+        "steps-to-shaping": {
+          "type": "header",
+          "text": "Steps to Shaping",
+          "value": "steps-to-shaping",
+          "line": 24,
+          "column": 0,
+          "depth": 4
+        },
+        "set-boundaries": {
+          "type": "header",
+          "text": "Set Boundaries",
+          "value": "set-boundaries",
+          "line": 31,
+          "column": 0,
+          "depth": 3
+        },
+        "finding-the-elements": {
+          "type": "header",
+          "text": "Finding the Elements",
+          "value": "finding-the-elements",
+          "line": 41,
+          "column": 0,
+          "depth": 3
+        },
+        "move-at-the-right-speed": {
+          "type": "header",
+          "text": "Move at the right speed",
+          "value": "move-at-the-right-speed",
+          "line": 43,
+          "column": 0,
+          "depth": 4
+        },
+        "risks-and-rabbit-holes": {
+          "type": "header",
+          "text": "Risks and Rabbit Holes",
+          "value": "risks-and-rabbit-holes",
+          "line": 64,
+          "column": 0,
+          "depth": 3
+        }
+      },
+      "children": [],
+      "parent": "bwlvrHRccHBUBhHu7Mh1G",
+      "data": {}
+    },
+    "ZjZvFbo2iYiX6bbffE2Xk": {
+      "id": "ZjZvFbo2iYiX6bbffE2Xk",
+      "title": "Manifesto",
+      "desc": "",
+      "updated": 1644116630430,
+      "created": 1644116626340,
+      "custom": {},
+      "fname": "agile.manifesto",
+      "type": "note",
+      "vault": {
+        "fsPath": "vault"
+      },
+      "contentHash": "7e40178896d19000e4d23280bfa5333b",
+      "links": [
+        {
+          "from": {
+            "fname": "agile",
+            "id": "bwlvrHRccHBUBhHu7Mh1G",
+            "vaultName": "vault"
+          },
+          "type": "backlink",
+          "position": {
+            "start": {
+              "line": 6,
+              "column": 100,
+              "offset": 237
+            },
+            "end": {
+              "line": 6,
+              "column": 119,
+              "offset": 256
+            },
+            "indent": []
+          },
+          "value": "agile.manifesto"
+        }
+      ],
+      "anchors": {},
+      "children": [],
+      "parent": "bwlvrHRccHBUBhHu7Mh1G",
+      "data": {}
+    }
+  },
+  "domains": [
+    {
+      "id": "wn8PE1RhG0znK1alrGFYv",
+      "title": "Knowledge Garden",
+      "desc": "",
+      "updated": 1725627729985,
+      "created": 1631901573363,
+      "custom": {
+        "nav_order": 0,
+        "permalink": "/"
+      },
+      "fname": "root",
+      "type": "note",
+      "vault": {
+        "fsPath": "vault"
+      },
+      "contentHash": "8d5496c75d3dbc62da1263726aa08b42",
+      "links": [],
+      "anchors": {
+        "my-second-brain": {
+          "type": "header",
+          "text": "My Second Brain",
+          "value": "my-second-brain",
+          "line": 8,
+          "column": 0,
+          "depth": 4
+        }
+      },
+      "children": [
+        "bwlvrHRccHBUBhHu7Mh1G",
+        "7w0mtdy9yip2z8dm44sazxg",
+        "8h567033xcainsquqy92vos",
+        "514eyidh124uj7yywy9os9z",
+        "zbqz5oql3yy88t9yf8q9mtz",
+        "XZTCg1c8mZeR9jEyM2HOy",
+        "6FtP5bCaxDDd47jEuSH5y",
+        "5c0e9ifp2lh9imgp1zahq33",
+        "aig5i0xuh2jq0ibzfq8sz22",
+        "8HZ1TTh4HUtNFePL29cg7"
+      ],
+      "parent": null,
+      "data": {},
+      "body": "\n#### My Second Brain\n\n---\n\nA collection of my notes around all things software development.\n\n> This website is generated by a Dendron template. For more information, see the [template README file](https://github.com/dendronhq/template.publish.github/).\n"
+    }
+  ],
+  "noteIndex": {
+    "id": "wn8PE1RhG0znK1alrGFYv",
+    "title": "Knowledge Garden",
+    "desc": "",
+    "updated": 1725627729985,
+    "created": 1631901573363,
+    "custom": {
+      "nav_order": 0,
+      "permalink": "/"
+    },
+    "fname": "root",
+    "type": "note",
+    "vault": {
+      "fsPath": "vault"
+    },
+    "contentHash": "8d5496c75d3dbc62da1263726aa08b42",
+    "links": [],
+    "anchors": {
+      "my-second-brain": {
+        "type": "header",
+        "text": "My Second Brain",
+        "value": "my-second-brain",
+        "line": 8,
+        "column": 0,
+        "depth": 4
+      }
+    },
+    "children": [
+      "bwlvrHRccHBUBhHu7Mh1G",
+      "7w0mtdy9yip2z8dm44sazxg",
+      "8h567033xcainsquqy92vos",
+      "514eyidh124uj7yywy9os9z",
+      "zbqz5oql3yy88t9yf8q9mtz",
+      "XZTCg1c8mZeR9jEyM2HOy",
+      "6FtP5bCaxDDd47jEuSH5y",
+      "5c0e9ifp2lh9imgp1zahq33",
+      "aig5i0xuh2jq0ibzfq8sz22",
+      "8HZ1TTh4HUtNFePL29cg7"
+    ],
+    "parent": null,
+    "data": {},
+    "body": "\n#### My Second Brain\n\n---\n\nA collection of my notes around all things software development.\n\n> This website is generated by a Dendron template. For more information, see the [template README file](https://github.com/dendronhq/template.publish.github/).\n"
+  },
+  "vaults": [
+    {
+      "fsPath": "vault"
+    }
+  ]
+}

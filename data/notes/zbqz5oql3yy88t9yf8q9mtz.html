@@ -1,0 +1,79 @@
+<h1 id="nextjs">Nextjs<a aria-hidden="true" class="anchor-heading icon-link" href="#nextjs"></a></h1>
+<h2 id="post-140-notes-and-usage">Post 14.0 notes and usage<a aria-hidden="true" class="anchor-heading icon-link" href="#post-140-notes-and-usage"></a></h2>
+<h3 id="routing">Routing<a aria-hidden="true" class="anchor-heading icon-link" href="#routing"></a></h3>
+<p>In version 13, Next.js introduced <strong>App router</strong>. Prior to this, Next used page router.</p>
+<p>The difference from the outset means that prior to 13, users would place their routes within a <code>pages/</code> directory where each file is considered a route:</p>
+<pre><code>└── pages
+    ├── about.js
+    ├── index.js
+    └── team.js
+
+</code></pre>
+<p>With 13 onward, app router looks for a <code>pages.(js|ts|tsx)</code> file who's route is determined by it's parent folders. Eg:</p>
+<pre><code>
+└── app
+    ├── about
+    │   └── page.js
+    ├── globals.css
+    ├── layout.js
+    ├── login
+    │   └── page.js
+    ├── page.js
+    └── team
+        └── route.js
+
+</code></pre>
+<p>Subfolders (leaves) become nested routes.</p>
+<p>App router is the recommended approach in modern NextJS projects. Page router is still supported.</p>
+<p>App router is built on <strong>React Server Components</strong> (RSC) By default, components inside app are RSC components.</p>
+<h3 id="file-conventions">File conventions<a aria-hidden="true" class="anchor-heading icon-link" href="#file-conventions"></a></h3>
+<p>Nextjs has various reserved file names that provide common inbuilt routing functionality:</p>
+<ul>
+<li><code>layout.js</code> - a shared segment between pages that preserves states, remains interactive and doesn't re-render. The top most layout is known as the <strong><em>Root layout</em></strong> and it is required component that is shared by all pages in the application. It must contain a html and a body tag.</li>
+<li><code>template.js</code></li>
+<li><code>error.js</code> - handles errors in routes</li>
+<li><code>loading.js</code> - creates a loading view. Beneath the hood it's tied in with Suspense in the layout file.</li>
+<li><code>not-found.js</code> - view for an unknown route</li>
+<li><code>page.js</code> or nested <code>layout.js</code></li>
+</ul>
+<h3 id="data-fetching">Data Fetching<a aria-hidden="true" class="anchor-heading icon-link" href="#data-fetching"></a></h3>
+<h4 id="on-the-server">On the server<a aria-hidden="true" class="anchor-heading icon-link" href="#on-the-server"></a></h4>
+<p>By default, Next.js automatically caches the return values of <code>fetch</code> in a built-in <strong>Data Cache</strong> on the server.</p>
+<p>If data is dynamic or requires re-validation, cached data needs to be purged. There are two ways to re-validate:</p>
+<ul>
+<li>Time based - revalidate once a certain amount of time has passed. This is useful for data that doesn't change frequently and freshness is not critical. This is good for a mostly static website.</li>
+</ul>
+<pre class="language-js"><code class="language-js"><span class="token function">fetch</span><span class="token punctuation">(</span><span class="token string">"https://..."</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> <span class="token literal-property property">next</span><span class="token operator">:</span> <span class="token punctuation">{</span> <span class="token literal-property property">revalidate</span><span class="token operator">:</span> <span class="token number">3600</span> <span class="token punctuation">}</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<ul>
+<li>On-demand revalidation - manually revalidate data based on an event. This is on par with traditional server side rendering to ensure that data is always fresh on every request.</li>
+</ul>
+<p>If you want a request to opt-out of caching, you need to set a <code>no-store</code> option in the fetch call:</p>
+<pre class="language-js"><code class="language-js"><span class="token comment">// Opt out of caching for an individual `fetch` request</span>
+<span class="token function">fetch</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">https://...</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">,</span> <span class="token punctuation">{</span> <span class="token literal-property property">cache</span><span class="token operator">:</span> <span class="token string">"no-store"</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>Alternatively, you can use the route segment config option to opt out of caching for a specific route segment:</p>
+<pre class="language-js"><code class="language-js"><span class="token comment">// Opt out of caching for all data requests in the route segment</span>
+<span class="token keyword module">export</span> <span class="token keyword">const</span> dynamic <span class="token operator">=</span> <span class="token string">"force-dynamic"</span><span class="token punctuation">;</span>
+</code></pre>
+<h4 id="on-the-client">On the client<a aria-hidden="true" class="anchor-heading icon-link" href="#on-the-client"></a></h4>
+<p>Fetching data on the client can be done via a Route Handler or a third party library such as Vercel's <a href="https://swr.vercel.app/">SWR</a> or <a href="https://tanstack.com/query/latest">TanStack Query</a>.</p>
+<p>Route Handlers execute on the server and therefore protect sensitive information.</p>
+<p>Route handlers replace the API routes from 13.0 onward (although API routes can still be used).</p>
+<h3 id="data-fetching-recommendations">Data fetching recommendations<a aria-hidden="true" class="anchor-heading icon-link" href="#data-fetching-recommendations"></a></h3>
+<p>Next.js recommends that whenever possible, to fetch data on the server with server components. This is done via server actions.</p>
+<p>Server actions are react functions that are asynchronous and are executed on the server. They can be denoted via the "use server" directive, can be inline or within a separate file.</p>
+<pre class="language-jsx"><code class="language-jsx"><span class="token comment">// Server Component</span>
+<span class="token keyword module">export</span> <span class="token keyword module">default</span> <span class="token keyword">function</span> <span class="token function"><span class="token maybe-class-name">Page</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment">// Server Action</span>
+  <span class="token keyword">async</span> <span class="token keyword">function</span> <span class="token function">create</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token string">'use server'</span>
+
+    <span class="token comment">// ...</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword control-flow">return</span> <span class="token punctuation">(</span>
+    <span class="token comment">// ...</span>
+  <span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre>

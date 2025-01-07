@@ -1,0 +1,98 @@
+<h1 id="reactive-programming-in-java-course-notes">Reactive Programming In Java (Course Notes)<a aria-hidden="true" class="anchor-heading icon-link" href="#reactive-programming-in-java-course-notes"></a></h1>
+<blockquote>
+<p>These notes are based entirely off the course: <a href="https://www.youtube.com/watch?v=OiRx2pZskR0&#x26;list=PLqq-6Pq4lTTYPR2oH7kgElMYZhJd4vOGI&#x26;index=5">"Reactive Programming with Java"</a></p>
+</blockquote>
+<p>The default programming module in java is known as the blocking programming module. We make a request, it takes time to process, and then it responds. The alternative to this is what is known as Reactive Programming.</p>
+<p>In Java, there are several frameworks that do this, namely:</p>
+<ul>
+<li>Reactor - has the maximum momentum of all the projects and is integrated with spring boot. A lot of cloud providers use it e.g. azure for their apis</li>
+<li>RxJava</li>
+</ul>
+<p>A lot of people confuse reactive with async. Reactive programming doesn't imply it's async as it can by synchronous. A typical or traditional use cases of reactive programming are:</p>
+<ul>
+<li>user events</li>
+<li>I/O responses e.g. file is completed</li>
+</ul>
+<p>Reactive Programming is not exactly event driven programming.</p>
+<p>Why do we care:</p>
+<p>When we think about modern application development, there are things that stand out today:</p>
+<ol>
+<li>high data scale</li>
+<li>high usage scale e..g. lots of users, availability</li>
+<li>cloud based costs - when servers were on prem it did not matter as much as cloud as inefficiencies can cost a lot</li>
+</ol>
+<p>Before doing vertical or horizontal scaling, it's often important to optimize the code.</p>
+<p>Given Java is non-blocking, Reactive programming can be seen commonly in JavaScript e.g. Node JS with Promises</p>
+<p>Imagine a web application where you have a request from a user to retrieve preference:</p>
+<pre class="language-java"><code class="language-Java"><span class="token annotation punctuation">@GetMaping</span><span class="token punctuation">(</span><span class="token string">"/users/{userId}"</span><span class="token punctuation">)</span>
+<span class="token keyword">public</span> <span class="token class-name">User</span> <span class="token function">getUserDetails</span><span class="token punctuation">(</span><span class="token annotation punctuation">@PathVariable</span> <span class="token class-name">String</span> userId<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token class-name">User</span> user <span class="token operator">=</span> userService<span class="token punctuation">.</span><span class="token function">getUser</span><span class="token punctuation">(</span>userId<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token class-name">UserPreferences</span> prefs <span class="token operator">=</span> userPreferenceService<span class="token punctuation">.</span><span class="token function">getPreferences</span><span class="token punctuation">(</span>userId<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    user<span class="token punctuation">.</span><span class="token function">setPreferences</span><span class="token punctuation">(</span>prefs<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> user<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>This endpoint makes a call to two services which are run sequentially as opposed to in parallel i.e. <code>userService</code> call to <code>getUser</code> must complete before <code>getPreference</code> is triggered via the <code>userPreferenceService</code>. This becomes a problem when we consider the requests as spinning up new threads for each user. Given these two services are not dependant on each other, the longevity of the request takes longer and the result is more threads are alive at any given time than necessary. The issue is that we now have wasted resources/hardware.</p>
+<p>Traditionally, Java developers don't think about concurrency as spring boot or mvc abstracts and handles it for them. When writing APIs, the mentality of the developer is that this code is handling a single request. Methods are written in a stateless way so each request does not touch another. The cost to this becomes:</p>
+<ol>
+<li>sequential blocking operations</li>
+<li>idling threads</li>
+</ol>
+<p>Reactive programming is not the only solution. There are concurrency APIs in Java which can handle this. For example, doing the previous <code>getUserDetails</code> blocking section using concurrency APIs:</p>
+<pre class="language-java"><code class="language-Java"><span class="token class-name">CompletableFuture</span><span class="token generics"><span class="token punctuation">&#x3C;</span><span class="token class-name">User</span><span class="token punctuation">></span></span> userAsync <span class="token operator">=</span> <span class="token class-name">CompletableFuture</span><span class="token punctuation">.</span><span class="token function">supplyAsync</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">-></span> userService<span class="token punctuation">.</span><span class="token function">getUser</span><span class="token punctuation">(</span>userId<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token class-name">CompletableFuture</span><span class="token generics"><span class="token punctuation">&#x3C;</span><span class="token class-name">UserPreferences</span><span class="token punctuation">></span></span> userPreferencesAsync <span class="token operator">=</span> <span class="token class-name">CompletableFuture</span><span class="token punctuation">.</span><span class="token function">supplyAsync</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">-></span> userPreferenceService<span class="token punctuation">.</span><span class="token function">getPreferences</span><span class="token punctuation">(</span>userId<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// combine into a single future</span>
+<span class="token class-name">CompletableFuture</span><span class="token generics"><span class="token punctuation">&#x3C;</span><span class="token class-name">Void</span><span class="token punctuation">></span></span> bothFutures <span class="token operator">=</span> <span class="token class-name">CompletableFuture</span><span class="token punctuation">.</span><span class="token function">allOf</span><span class="token punctuation">(</span>userAsync<span class="token punctuation">,</span> userPreferencesAsync<span class="token punctuation">)</span>
+<span class="token comment">// block until they're ready</span>
+<span class="token class-name">BothFutures</span><span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// get the results and put into user</span>
+<span class="token class-name">User</span> user <span class="token operator">=</span> userAsync<span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// get the results and put into prefs</span>
+<span class="token class-name">UserPreferences</span> prefs <span class="token operator">=</span> userPreferencesAsync<span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+user<span class="token punctuation">.</span><span class="token function">setUserPreferences</span><span class="token punctuation">(</span>prefs<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">return</span> user<span class="token punctuation">;</span>
+</code></pre>
+<p>This works however it's still causing a thread to idle and that is due to <code>bothFutures.join()</code> which, although allows the two services to be called in parallel, still blocks until they are complete. The other problem is this that Future API like the example above is very messy and a lot to work with. This is what Reactive Programming aims to resolves.</p>
+<p>The above example, using Reactive Programming, becomes:</p>
+<pre class="language-java"><code class="language-Java"><span class="token keyword">public</span> <span class="token class-name">Mono</span><span class="token generics"><span class="token punctuation">&#x3C;</span><span class="token class-name">User</span><span class="token punctuation">></span></span> <span class="token function">getUserDetails</span><span class="token punctuation">(</span><span class="token annotation punctuation">@PathVariable</span> <span class="token class-name">String</span> userId<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> userService<span class="token punctuation">.</span><span class="token function">getUser</span><span class="token punctuation">(</span>userId<span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">zipWith</span><span class="token punctuation">(</span>userPreferencesService<span class="token punctuation">.</span><span class="token function">getPreferences</span><span class="token punctuation">(</span>userId<span class="token punctuation">)</span><span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span>tuple <span class="token operator">-></span> <span class="token punctuation">{</span>
+            <span class="token class-name">User</span> user <span class="token operator">=</span> tuple<span class="token punctuation">.</span><span class="token function">getT1</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            user<span class="token punctuation">.</span><span class="token function">setUserPreferences</span><span class="token punctuation">(</span>tuple<span class="token punctuation">.</span>getT2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">return</span> user<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>The difference above to the concurrent approach is:</p>
+<ul>
+<li>much simpler</li>
+<li>Reusable flexible functions - many of the paradigms can be re-used and applied all over the application</li>
+</ul>
+<p>Reactive programming is more declarative than imperative. Java has a 'Flow' interface that can be used by reactive programming libraries (in reality it was not adopted as much as was hoped).</p>
+<p>Reactive programming is not worth it for small projects. The learning curve is big and the benefit only shows when the size of the project is increased.</p>
+<p>Reactive programming in java may seem familiar when comparing to Java Collections. Java Streams represent a sequence of data, with no concern over the internal representation of the collection, we just focus on the computation of the data. The iteration is also internal and is obfuscated from the programmer.</p>
+<pre class="language-java"><code class="language-Java"><span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&#x3C;</span><span class="token class-name">Integer</span><span class="token punctuation">></span></span> numbers <span class="token operator">=</span> <span class="token class-name">Arrays</span><span class="token punctuation">.</span><span class="token function">asList</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">,</span> <span class="token number">7</span><span class="token punctuation">,</span> <span class="token number">8</span><span class="token punctuation">,</span> <span class="token number">9</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// Traditional loop</span>
+<span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&#x3C;</span> numbers<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>numbers<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// Streams</span>
+numbers<span class="token punctuation">.</span><span class="token function">stream</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span>number <span class="token operator">-></span> <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>number<span class="token punctuation">)</span><span class="token punctuation">)</span>
+</code></pre>
+<p>Typical stream operations: map, filter, flatMap, findFirst and more.</p>
+<p>Relevant Design patterns:</p>
+<ul>
+<li>Iterator Pattern - traverse a container and access it's elements. It decouples the algorithms from the container meaning that we don't care about the underlying implementation and that the iterator can take any container and gives us a consistent experience (Collections).</li>
+<li>Observer Pattern - used to observe an event/number of events and trigger a course of action.</li>
+</ul>
+<p>These two patterns are sort of inverses of each other (push/pull data).</p>
+<pre class="language-java"><code class="language-Java"><span class="token comment">// iterator</span>
+myList<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span>element <span class="token operator">-></span> <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>element<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//push</span>
+<span class="token comment">// observer</span>
+clicksChannel<span class="token punctuation">.</span><span class="token function">addObserver</span><span class="token punctuation">(</span>event <span class="token operator">-></span> <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>event<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">//pull</span>
+</code></pre>
+<p>The idea these two use the same module/paradigm is the fundamental idea behind reactive programming.</p>
+<p><strong>Reactive Streams</strong> were introduced in Java 9.</p>

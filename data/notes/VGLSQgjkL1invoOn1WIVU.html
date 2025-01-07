@@ -1,0 +1,47 @@
+<h1 id="operation-rewrite">Operation Rewrite<a aria-hidden="true" class="anchor-heading icon-link" href="#operation-rewrite"></a></h1>
+<h2 id="project-operation-re-write-purposely-obscure">Project: Operation Re-write (Purposely obscure)<a aria-hidden="true" class="anchor-heading icon-link" href="#project-operation-re-write-purposely-obscure"></a></h2>
+<h3 id="problem">Problem:<a aria-hidden="true" class="anchor-heading icon-link" href="#problem"></a></h3>
+<p>Existing site is slow and difficult to improve given it's built in wordpress. Gives limited options for improvement from a developer perspective without adding more bloat and plugins. Owned by non-for-profit therefore budget is an important consideration.</p>
+<h3 id="solution">Solution:<a aria-hidden="true" class="anchor-heading icon-link" href="#solution"></a></h3>
+<p>Re-write using headless CMS and following JAMSTACK princples.</p>
+<h3 id="existing-stack">Existing stack<a aria-hidden="true" class="anchor-heading icon-link" href="#existing-stack"></a></h3>
+<ul>
+<li>Frontend: PHP</li>
+<li>Backend: PHP</li>
+<li>CMS: Wordpress</li>
+<li>DB: SQL</li>
+</ul>
+<h3 id="proposed-re-architected-stack">Proposed re-architected stack:<a aria-hidden="true" class="anchor-heading icon-link" href="#proposed-re-architected-stack"></a></h3>
+<ul>
+<li>Frontend: React framework</li>
+<li>Backend - possibly NodeJS with GraphQL</li>
+<li>CMS: Headless</li>
+<li>DB: ?? not sure if I need one</li>
+</ul>
+<h3 id="rendering-style">Rendering Style<a aria-hidden="true" class="anchor-heading icon-link" href="#rendering-style"></a></h3>
+<p>Ref <a href="/KnowledgeGarden/notes/KnACyiSV918ASnIeSH2TQ">Rendering Design Patterns / Strategies</a></p>
+<p>Options: SSR, SSG, SPA, ISR</p>
+<p>Content is mostly static - new blog posts written relatively infrequently. There is an ecommerce section with a small number of products. No comments or anything else that is dynamic at the moment.</p>
+<p>SSG could be a good option here but a framework that supports SSR as well could be useful for any future concerns. Maybe best of both worlds and use ISR? No need to rebuild every time we change a post or add a product.</p>
+<h3 id="framework-options">Framework Options<a aria-hidden="true" class="anchor-heading icon-link" href="#framework-options"></a></h3>
+<ul>
+<li>Remix - looks good but pretty new</li>
+<li>Next - established, but maybe bloated for my use case? Needs a server to run for ISR and SSR</li>
+<li>Gatsby - only does SSG (?)</li>
+</ul>
+<h3 id="headless-cms-options">Headless CMS Options<a aria-hidden="true" class="anchor-heading icon-link" href="#headless-cms-options"></a></h3>
+<ul>
+<li>Strapi - free/open source</li>
+<li>Contentful - recommended but paid after certain point</li>
+</ul>
+<h3 id="db">DB?<a aria-hidden="true" class="anchor-heading icon-link" href="#db"></a></h3>
+<p>Do I need?</p>
+<ul>
+<li>PSQL</li>
+</ul>
+<h2 id="build-steps">Build steps<a aria-hidden="true" class="anchor-heading icon-link" href="#build-steps"></a></h2>
+<ol>
+<li>Set up CMS</li>
+<li>Set up FE</li>
+<li>interface the two</li>
+</ol>

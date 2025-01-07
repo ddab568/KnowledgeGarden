@@ -1,0 +1,15 @@
+<h1 id="frameworks">Frameworks<a aria-hidden="true" class="anchor-heading icon-link" href="#frameworks"></a></h1>
+<p>General notes about various new/hot JS frameworks and their differences</p>
+<h2 id="rendering">Rendering<a aria-hidden="true" class="anchor-heading icon-link" href="#rendering"></a></h2>
+<p><strong>React</strong> - starts from the top and any update to state will re-renders all the way down the component tree</p>
+<p><strong>Solid</strong> or <strong>Qwik</strong>: Change in state is not associated with a component rather directly with a DOM node.</p>
+<h2 id="pre-rendering">Pre-rendering<a aria-hidden="true" class="anchor-heading icon-link" href="#pre-rendering"></a></h2>
+<p><strong>React and Solid</strong> : Hydrate the html sent to the client</p>
+<p><strong>Qwik</strong> : Serialize the reactivity graph at the server, effectively lowering time to interactive (TTI)</p>
+<h2 id="interactivity">Interactivity<a aria-hidden="true" class="anchor-heading icon-link" href="#interactivity"></a></h2>
+<p><strong>React</strong>: All components re-execute on state change from interactivity
+<strong>Solid</strong> or <strong>Qwik</strong>: Only execute at the event handle</p>
+<p>Imagining a simple app where Counter is the parent and Display/Increment are children that display and update parent state:
+<img src="/KnowledgeGarden/assets/images/2023-02-13-20-59-56.png" alt="https://www.builder.io/blog/resumability-vs-hydration?ck_subscriber_id=1441143038#client-side-rendering"></p>
+<h2 id="resumability">Resumability<a aria-hidden="true" class="anchor-heading icon-link" href="#resumability"></a></h2>
+<p>Qwik uses 'resumability' as opposed to hydration which is a way to recover state without re-executing the application components on the client. This is done by serializing everything required e.g. html and event listeners, for the client to resume where the server left off.</p>

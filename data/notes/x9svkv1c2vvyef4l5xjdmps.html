@@ -1,0 +1,17 @@
+<h1 id="cqrs">CQRS<a aria-hidden="true" class="anchor-heading icon-link" href="#cqrs"></a></h1>
+<h2 id="command-and-query-responsibility-segregation">Command and Query Responsibility Segregation<a aria-hidden="true" class="anchor-heading icon-link" href="#command-and-query-responsibility-segregation"></a></h2>
+<p>CQRS means to segrate the responsibility between commands (write requests) and queries (read requests).</p>
+<p>Commands and queries don't need to be run on separate databases, only the responsibility and behaviours should be separate within the code. Different databases can be used to optimize reads or writes according to needs.</p>
+<p>Commands are events that took place in the domain. They are usually named with past-participle verbs e.g. OrderConfirmed</p>
+<p>Commands are requests for changes to the domain. They are usually named with a verb e.g. ConfirmOrder</p>
+<p>Commands and events are just data structures with no behaviour. They are called "Data Transfer Objects" (DTOs).</p>
+<p>Aggregates are a larger unit of encapsulation that handles commands, applies events and have a state model encapsulated within that allows it to implement the required command validation.</p>
+<p>A command handler receives a command and brokers a result from the appropriate aggregate.</p>
+<h4 id="event-sourcing">Event sourcing<a aria-hidden="true" class="anchor-heading icon-link" href="#event-sourcing"></a></h4>
+<p>Storing all the changes (events) to the system rather than just its current state.</p>
+<p>Event sourcing is not a requirement to do CQRS but it works well with it.</p>
+<hr>
+<strong>Backlinks</strong>
+<ul>
+<li><a href="/KnowledgeGarden/notes/7w0mtdy9yip2z8dm44sazxg">Architecture</a></li>
+</ul>
